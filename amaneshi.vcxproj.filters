@@ -23,10 +23,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Input.h">
+    <ClInclude Include="src\fpscounter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\fpscounter.hpp">
+    <ClInclude Include="src\Input.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

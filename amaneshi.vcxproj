@@ -24,7 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\fpscounter.hpp" />
-    <ClInclude Include="src\Input.h" />
+    <ClInclude Include="src\Input.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
