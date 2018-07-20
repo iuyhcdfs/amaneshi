@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,12 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Input.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Amaneshi\Graphics_GLFW.cpp" />
+    <ClCompile Include="src\Amaneshi\Graphics_Interface.cpp" />
+    <ClCompile Include="src\Amaneshi\Input_GLFW.cpp" />
+    <ClCompile Include="src\HelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\fpscounter.hpp" />
-    <ClInclude Include="src\Input.hpp" />
+    <ClInclude Include="src\Amaneshi\fpscounter.hpp" />
+    <ClInclude Include="src\Amaneshi\Graphics_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\Graphics_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\Input_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\Input_Interface.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

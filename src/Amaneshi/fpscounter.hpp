@@ -1,6 +1,9 @@
 #pragma once
 #include <iostream>
 #include <GLFW/glfw3.h>
+
+// i need to be in.. utility? ooh how about debug or testing
+
 namespace amaneshi {
 
 	/*

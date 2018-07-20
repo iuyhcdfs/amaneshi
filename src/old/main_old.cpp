@@ -6,7 +6,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "fpscounter.hpp"
+//#include "fpscounter.hpp"
 #include "Input.hpp"
 
 // From Anton Gerdelan's opengl4 tutorials
@@ -28,7 +28,7 @@ const char* fragment_shader =
 
 //#define GLFW_DLL is it even necessary
 
-int main(int argc, char* argv[]) {
+int main_old(int argc, char* argv[]) {
 	std::cout << "the time is " << std::time(nullptr) << std::endl;
 	std::cout << "starting amaneshi" << std::endl;
 	//std::cout << std::thread::hardware_concurrency() << std::endl;;
@@ -102,7 +102,7 @@ int main(int argc, char* argv[]) {
 	glAttachShader(shader_programme, vs);
 	glLinkProgram(shader_programme);
 
-	amaneshi::FpsCounter fpsCounter;
+	//amaneshi::FpsCounter fpsCounter;
 
 	while (!glfwWindowShouldClose(window)) {
 		// wipe the drawing surface clear
