@@ -5,6 +5,7 @@
 
 // to make this elegant though...
 #include <string>
+#include <vector>
 #include <queue>
 #include <mutex>
 #include <condition_variable>
@@ -37,6 +38,7 @@ namespace amaneshi
 			std::queue<Task*> Queue;
 		public:
 			TaskQueue();
+			~TaskQueue();
 			Task * Consume(void);
 			void Produce(Task * task);
 		};

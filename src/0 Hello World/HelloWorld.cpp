@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Amaneshi/Graphics_GLFW.hpp"
-#include "Amaneshi/Input_Interface.hpp"
+#include <Amaneshi/Graphics_GLFW.hpp>
+#include <Amaneshi/Input_Interface.hpp>
 
 int main() 
 {

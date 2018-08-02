@@ -5,6 +5,10 @@ amaneshi::thread::TaskQueue::TaskQueue()
 	this->Name = "";
 }
 
+amaneshi::thread::TaskQueue::~TaskQueue()
+{
+}
+
 amaneshi::thread::Task * amaneshi::thread::TaskQueue::Consume(void)
 {
 	std::unique_lock<std::mutex> lock(this->Mutex);
