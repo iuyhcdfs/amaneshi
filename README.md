@@ -1,8 +1,8 @@
-amaneshi is my game engine
+amaneshi is my game engine. it was built so that i could learn about game engines while building it.
 
-if i make an actual game worth selling, its probably not with this engine (see roadmap for why)
+freely use the code for anything besides claiming you spent the time and effort on it :P
 
 goals:
- - use c++ only without worrying about targeting varying systems or consoles
- - code is reusuable and consistent
+ - use c++ only without worrying about targeting varying systems or consoles HOO
+ - code is reusuable and consistent enough
  - enjoy creating the code you'd just use existing libraries for when you're making a proper game

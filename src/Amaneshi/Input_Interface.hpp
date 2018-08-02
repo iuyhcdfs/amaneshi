@@ -1,16 +1,17 @@
 #pragma once
 #include <vector>
-namespace amaneshi
+namespace amaneshi 
 {
-	namespace input
+	namespace input	
 	{
 		// dealing with... digital buttons, analog sticks and triggers
 		// stick with just the mouse for now
 
-		struct Mouse_Struct
+		struct Mouse_Struct	
 		{
+		};
 
-		} Mouse_Present;
+		extern std::string Framework;
 
 	}
 }

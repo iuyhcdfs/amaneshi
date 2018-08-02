@@ -39,17 +39,18 @@ namespace amaneshi {
 			amaneshi::graphics::Terminate = Terminate;
 		}
 
-		void Initialize(amaneshi::graphics::WindowStruct windowParams) {
-
+		void Initialize(const amaneshi::graphics::WindowStruct& window) {
+			
 			if (!glfwInit()) {
 				std::cerr << "ERROR: glfwInit failed" << std::endl;
 				return;
 			}
+
 			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 			glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-			Window = glfwCreateWindow(640, 480, "lets make GO", NULL, NULL);
+			Window = glfwCreateWindow(window.width, window.height, window.title.c_str(), NULL, NULL);
 			if (!Window) {
 				std::cerr << "ERROR: could not open window with GLFW3" << std::endl;
 				glfwTerminate();
@@ -68,11 +69,7 @@ namespace amaneshi {
 				return;
 			}
 
-			// get version info
-			const GLubyte* renderer = glGetString(GL_RENDERER); // get renderer string
-			const GLubyte* version = glGetString(GL_VERSION); // version as a string
-			printf("Renderer: %s\n", renderer);
-			printf("OpenGL version supported %s\n", version);
+			PrintOpenGLVersion();
 
 			// tell GL to only draw onto a pixel if the shape is closer to the viewer
 			glEnable(GL_DEPTH_TEST); // enable depth-testing
@@ -125,9 +122,19 @@ namespace amaneshi {
 			return;
 		}
 		
+		
+
+		void PrintOpenGLVersion() {
+			const GLubyte* renderer = glGetString(GL_RENDERER); // get renderer string
+			const GLubyte* version = glGetString(GL_VERSION); // version as a string
+			printf("Renderer: %s\n", renderer);
+			printf("OpenGL version supported %s\n", version);
+		}
+		
 		void Terminate() {
 			glfwDestroyWindow(Window);
 			glfwTerminate();
 		}
+
 	}
 }

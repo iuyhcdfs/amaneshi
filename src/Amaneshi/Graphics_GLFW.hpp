@@ -8,8 +8,8 @@ namespace amaneshi {
 
 		void HookToAmaneshi();
 
-		void Initialize(struct amaneshi::graphics::WindowStruct windowParams);
+		void Initialize(const amaneshi::graphics::WindowStruct& window);
+		void PrintOpenGLVersion();
 		void Terminate();
-
 	}
 }

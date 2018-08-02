@@ -8,12 +8,12 @@ namespace amaneshi
 	namespace glfw 
 	{
 
-		struct Mouse_Struct 
+		Mouse_Struct Mouse;
+
+		void Initalize() 
 		{
-			int x;
-			int y;
-			bool button[];
-		} Mouse;
+			
+		}
 
 		void ClickCallback(GLFWwindow* window, int button, int action, int mods) 
 		{

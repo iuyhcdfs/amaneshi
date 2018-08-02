@@ -4,6 +4,7 @@
 
 namespace amaneshi {
 	namespace graphics {
+
 		struct WindowStruct {
 			int width;
 			int height;
@@ -12,13 +13,15 @@ namespace amaneshi {
 		};
 		
 		extern std::string Framework;
-		extern void(*Initialize) (WindowStruct windowParams);
-		extern void(*Terminate) ();
-		
-		// below todo for glfw ~at least =================================
+		extern void(*Initialize)(const WindowStruct& window);
+		extern void(*Terminate)();
 
-		//void(*PrintOpenGLVersion) ();
-		//void(*WindowResize) ();
+		extern void(*DrawPrimitive)();
+
+		// below todo for glfw ~at least =================================
+		//extern void(*WindowResize) ();
+
+		// SOMETHING ABOUT DRAWING UKNO? hand over an asset? hand over vertices? hand over shaders?
 
 	}
 }

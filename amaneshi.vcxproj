@@ -22,14 +22,20 @@
     <ClCompile Include="src\Amaneshi\Graphics_GLFW.cpp" />
     <ClCompile Include="src\Amaneshi\Graphics_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\Input_GLFW.cpp" />
+    <ClCompile Include="src\Amaneshi\Thread_Task.cpp" />
     <ClCompile Include="src\HelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Amaneshi\Debug_Log.hpp" />
+    <ClInclude Include="src\Amaneshi\Debug_Test.hpp" />
     <ClInclude Include="src\Amaneshi\fpscounter.hpp" />
     <ClInclude Include="src\Amaneshi\Graphics_GLFW.hpp" />
     <ClInclude Include="src\Amaneshi\Graphics_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\Input_GLFW.hpp" />
     <ClInclude Include="src\Amaneshi\Input_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\Thread_Job.hpp" />
+    <ClInclude Include="src\Amaneshi\Thread_Queue.hpp" />
+    <ClInclude Include="src\Amaneshi\Thread_Task.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
