@@ -19,17 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\2 Go\Go.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_GLFW.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\External\Input_GLFW.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp" />
-    <ClCompile Include="src\1 Not Air Hockey\CircleClicking.cpp" />
+    <ClCompile Include="src\1 Not Air Hockey\NotAirHockey.cpp" />
     <ClCompile Include="src\0 Hello World\HelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp" />
     <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp" />
+    <ClInclude Include="src\Amaneshi\Engine_Debug.hpp" />
+    <ClInclude Include="src\Amaneshi\Engine_Standard.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_GLFW.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />

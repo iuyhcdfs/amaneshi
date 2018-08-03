@@ -2,4 +2,5 @@
 
 #define HELLO_WORLD
 //#define NOT_AIR_HOCKEY
-//#define 
+//#define GO
+//#define MICE_AND_SWORDS
