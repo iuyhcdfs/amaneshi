@@ -12,11 +12,11 @@ amaneshi::thread::TaskQueue::~TaskQueue()
 amaneshi::thread::Task * amaneshi::thread::TaskQueue::Consume(void)
 {
 	std::unique_lock<std::mutex> lock(this->Mutex);
-	if (Queue.size == 0) {
+	if (this->Queue.size() == 0) {
 		this->CV.wait(lock);
 	}
-	Task * popped = Queue.front();
-	Queue.pop();
+	Task * popped = this->Queue.front();
+	this->Queue.pop();
 	return popped;
 }
 

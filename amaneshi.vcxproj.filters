@@ -15,51 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Amaneshi\Graphics_GLFW.cpp">
+    <ClCompile Include="src\1 Not Air Hockey\CircleClicking.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\Input_GLFW.cpp">
+    <ClCompile Include="src\0 Hello World\HelloWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\Graphics_Interface.cpp">
+    <ClCompile Include="src\Amaneshi\External\Graphics_GLFW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\HelloWorld.cpp">
+    <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\Thread_Task.cpp">
+    <ClCompile Include="src\Amaneshi\External\Input_GLFW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Amaneshi\fpscounter.hpp">
+    <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Graphics_GLFW.hpp">
+    <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Graphics_Interface.hpp">
+    <ClInclude Include="src\Amaneshi\External\fpscounter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Input_GLFW.hpp">
+    <ClInclude Include="src\Amaneshi\External\Graphics_GLFW.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Input_Interface.hpp">
+    <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Debug_Log.hpp">
+    <ClInclude Include="src\Amaneshi\External\Input_GLFW.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Debug_Test.hpp">
+    <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Thread_Task.hpp">
+    <ClInclude Include="src\Amaneshi\System\Thread_Job.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Thread_Queue.hpp">
+    <ClInclude Include="src\Amaneshi\System\Thread_Queue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Thread_Job.hpp">
+    <ClInclude Include="src\Amaneshi\System\Thread_Task.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Choose_Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

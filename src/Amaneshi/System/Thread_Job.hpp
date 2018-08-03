@@ -37,7 +37,8 @@ namespace amaneshi
 		class Job 
 		{
 		protected:
-
+			Job() {};
+			virtual ~Job() = 0;
 		public:
 			virtual void Post() = 0;
 			void Pause();

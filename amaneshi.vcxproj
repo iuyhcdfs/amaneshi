@@ -19,23 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Amaneshi\Graphics_GLFW.cpp" />
-    <ClCompile Include="src\Amaneshi\Graphics_Interface.cpp" />
-    <ClCompile Include="src\Amaneshi\Input_GLFW.cpp" />
-    <ClCompile Include="src\Amaneshi\Thread_Task.cpp" />
-    <ClCompile Include="src\HelloWorld.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Graphics_GLFW.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Input_GLFW.cpp" />
+    <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp" />
+    <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp" />
+    <ClCompile Include="src\1 Not Air Hockey\CircleClicking.cpp" />
+    <ClCompile Include="src\0 Hello World\HelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Amaneshi\Debug_Log.hpp" />
-    <ClInclude Include="src\Amaneshi\Debug_Test.hpp" />
-    <ClInclude Include="src\Amaneshi\fpscounter.hpp" />
-    <ClInclude Include="src\Amaneshi\Graphics_GLFW.hpp" />
-    <ClInclude Include="src\Amaneshi\Graphics_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\Input_GLFW.hpp" />
-    <ClInclude Include="src\Amaneshi\Input_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\Thread_Job.hpp" />
-    <ClInclude Include="src\Amaneshi\Thread_Queue.hpp" />
-    <ClInclude Include="src\Amaneshi\Thread_Task.hpp" />
+    <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp" />
+    <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp" />
+    <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Graphics_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Input_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\System\Thread_Job.hpp" />
+    <ClInclude Include="src\Amaneshi\System\Thread_Queue.hpp" />
+    <ClInclude Include="src\Amaneshi\System\Thread_Task.hpp" />
+    <ClInclude Include="src\Choose_Game.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -95,7 +100,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/external/GLEW/include;$(SolutionDir)/external/GLFW/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/external/GLEW/include;$(SolutionDir)/external/GLFW/include;$(SolutionDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\David Sicong Zhou\sannaigames\amaneshi\external\GLFW\lib-vc2015;C:\Users\David Sicong Zhou\sannaigames\amaneshi\external\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -118,7 +123,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/external/GLEW/include;$(SolutionDir)/external/GLFW/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/external/GLEW/include;$(SolutionDir)/external/GLFW/include;$(SolutionDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

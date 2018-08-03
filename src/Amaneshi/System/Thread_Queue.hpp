@@ -26,7 +26,7 @@ namespace amaneshi
 			std::mutex Mutex;
 			std::condition_variable CV;
 			TaskPool() {};
-			virtual ~TaskPool() = 0;
+			virtual ~TaskPool() {};
 		public:
 			virtual Task * Consume(void) = 0;
 			virtual void Produce(Task * task) = 0;
