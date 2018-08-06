@@ -1,11 +1,14 @@
-#include "Graphics_GLFW.hpp"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <string>
 
-#include "Input_GLFW.hpp"
+#include "Setup_GLFW.hpp"
+#include "Graphics_Interface.hpp"
+#include "Input_Interface.hpp"
+
+// depreciate
 #include "fpscounter.hpp"
 
 // TEMP STUFF
@@ -30,16 +33,22 @@ namespace amaneshi {
 
 		GLFWwindow * Window;
 
-		void HookToAmaneshi() {
-			if (amaneshi::graphics::Framework != "") {
-				return;
-			}
-			amaneshi::graphics::Framework = "glfw";
-			amaneshi::graphics::Initialize = Initialize;
-			amaneshi::graphics::Terminate = Terminate;
+		void InitializeWindow(const amaneshi::graphics::WindowStruct& window);
+		void CallbackMouseButton(GLFWwindow* window, int button, int action, int mods);
+		void CallbackMousePosition(GLFWwindow* window, double xpos, double ypos);
+		void CallbackKeyboard(GLFWwindow* window, int key, int scancode, int action, int mods);
+		static void SetAmaneshiGraphics();
+		static void SetAmaneshiInput();
+		static void PrintOpenGLVersion();
+
+		void HookToAmaneshi() 
+		{
+			SetAmaneshiGraphics();
+			SetAmaneshiInput();
 		}
 
-		void Initialize(const amaneshi::graphics::WindowStruct& window) {
+		
+		void InitializeWindow(const amaneshi::graphics::WindowStruct& window) {
 			
 			if (!glfwInit()) {
 				std::cerr << "ERROR: glfwInit failed" << std::endl;
@@ -57,9 +66,6 @@ namespace amaneshi {
 				return;
 			}
 			glfwMakeContextCurrent(Window);
-			glfwSetKeyCallback(Window, amaneshi::glfw::KeyCallback);
-			glfwSetMouseButtonCallback(Window, &amaneshi::glfw::ClickCallback);
-			glfwSetCursorPosCallback(Window, &amaneshi::glfw::CursorPosCallback);
 
 			glewExperimental = GL_TRUE;
 			GLenum err = glewInit();
@@ -75,7 +81,48 @@ namespace amaneshi {
 			glEnable(GL_DEPTH_TEST); // enable depth-testing
 			glDepthFunc(GL_LESS); // depth-testing interprets a smaller value as "closer"
 
-								  /* OTHER STUFF GOES HERE NEXT */
+		}
+
+		void CallbackMouseButton(GLFWwindow* window, int button, int action, int mods)
+		{
+			if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
+			{
+				std::cout << "click" << std::endl;
+			}
+		}
+
+		void CallbackMousePosition(GLFWwindow* window, double xpos, double ypos)
+		{
+			amaneshi::input::Mouse.x = xpos;
+			amaneshi::input::Mouse.y = ypos;
+		}
+
+		void CallbackKeyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
+		{
+			if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+				glfwSetWindowShouldClose(window, GL_TRUE);
+		}
+
+
+		static void SetAmaneshiGraphics()
+		{
+			amaneshi::graphics::InitializeWindow = InitializeWindow;
+		}
+		static void SetAmaneshiInput()
+		{
+			glfwSetKeyCallback(Window, amaneshi::glfw::CallbackKeyboard);
+			glfwSetMouseButtonCallback(Window, &amaneshi::glfw::CallbackMouseButton);
+			glfwSetCursorPosCallback(Window, &amaneshi::glfw::CallbackMousePosition);
+		}
+		static void PrintOpenGLVersion() {
+			const GLubyte* renderer = glGetString(GL_RENDERER); // get renderer string
+			const GLubyte* version = glGetString(GL_VERSION); // version as a string
+			printf("Renderer: %s\n", renderer);
+			printf("OpenGL version supported %s\n", version);
+		}
+
+		/*
+		void TempShader() {					  
 			float points[] = {
 				0.0f,  0.5f,  0.0f,
 				0.5f, -0.5f,  0.0f,
@@ -103,38 +150,20 @@ namespace amaneshi {
 			glAttachShader(shader_programme, fs);
 			glAttachShader(shader_programme, vs);
 			glLinkProgram(shader_programme);
-
-			amaneshi::FpsCounter fpsCounter;
-
-			while (!glfwWindowShouldClose(Window)) {
-				// wipe the drawing surface clear
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-				glUseProgram(shader_programme);
-				glBindVertexArray(vao);
-				// draw points 0-3 from the currently bound VAO with current in-use shader
-				glDrawArrays(GL_TRIANGLES, 0, 3);
-				// update other events like input handling 
-				glfwPollEvents();
-				// put the stuff we've been drawing onto the display
-				glfwSwapBuffers(Window);
-				fpsCounter.Update();
-			}
-			return;
 		}
-		
-		
-
-		void PrintOpenGLVersion() {
-			const GLubyte* renderer = glGetString(GL_RENDERER); // get renderer string
-			const GLubyte* version = glGetString(GL_VERSION); // version as a string
-			printf("Renderer: %s\n", renderer);
-			printf("OpenGL version supported %s\n", version);
+		void TempDraw() {
+			// wipe the drawing surface clear
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			glUseProgram(shader_programme);
+			glBindVertexArray(vao);
+			// draw points 0-3 from the currently bound VAO with current in-use shader
+			glDrawArrays(GL_TRIANGLES, 0, 3);
+			// update other events like input handling 
+			glfwPollEvents();
+			// put the stuff we've been drawing onto the display
+			glfwSwapBuffers(Window);
+			fpsCounter.Update();
 		}
-		
-		void Terminate() {
-			glfwDestroyWindow(Window);
-			glfwTerminate();
-		}
-
+		*/
 	}
 }

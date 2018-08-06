@@ -19,31 +19,41 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\2 Go\Go.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Graphics_GLFW.cpp" />
+    <ClCompile Include="src\03 Go\Go.cpp" />
+    <ClCompile Include="src\04 Of Mice and Swords\MiceAndSwords.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Input_GLFW.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp" />
-    <ClCompile Include="src\1 Not Air Hockey\NotAirHockey.cpp" />
-    <ClCompile Include="src\0 Hello World\HelloWorld.cpp" />
+    <ClCompile Include="src\02 Not Air Hockey\NotAirHockey.cpp" />
+    <ClCompile Include="src\01 Hello World\HelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp" />
     <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp" />
-    <ClInclude Include="src\Amaneshi\Engine_Debug.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Standard.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
-    <ClInclude Include="src\Amaneshi\External\Graphics_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\External\Input_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Input_Buffer.hpp" />
     <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\System\Time_Clock.hpp" />
+    <ClInclude Include="src\Amaneshi\System\Time_FPS.hpp" />
+    <ClInclude Include="src\Amaneshi\Game_Object.hpp" />
+    <ClInclude Include="src\Amaneshi\Game_Physics.hpp" />
+    <ClInclude Include="src\Amaneshi\Game_Renderer.hpp" />
+    <ClInclude Include="src\Amaneshi\Game_Updatable.hpp" />
+    <ClInclude Include="src\Amaneshi\Game_World.hpp" />
     <ClInclude Include="src\Amaneshi\System\Thread_Job.hpp" />
     <ClInclude Include="src\Amaneshi\System\Thread_Queue.hpp" />
     <ClInclude Include="src\Amaneshi\System\Thread_Task.hpp" />
     <ClInclude Include="src\Choose_Game.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Test\TODO.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -1,27 +1,67 @@
 #pragma once
+#include <vector>
 #include <string>
 // the engine side touching the wall called abstraction
 
-namespace amaneshi {
-	namespace graphics {
+namespace amaneshi 
+{
+	namespace graphics 
+	{
 
-		struct WindowStruct {
+		struct WindowStruct 
+		{
 			int width;
 			int height;
 			std::string title;
 			bool fullscreen;
 		};
-		
-		extern std::string Framework;
-		extern void(*Initialize)(const WindowStruct& window);
-		extern void(*Terminate)();
 
-		extern void(*DrawPrimitive)();
+		struct Point
+		{
+			double x;
+			double y;
+			double z;
+			Point() : x(0), y(0), z(0) {};
+			Point(double x, double y) : x(x), y(y), z(0) {};
+			Point(double x, double y, double z) : x(x), y(y), z(z) {};
+		};
 
-		// below todo for glfw ~at least =================================
-		//extern void(*WindowResize) ();
+		struct Color
+		{
+			double r;
+			double g;
+			double b;
+			double a;
+			Color() : r(0), g(0), b(0), a(1) {};
+			Color(double r, double g, double b) : r(r), g(g), b(b), a(1) {};
+			Color(double r, double g, double b, double a) : r(r), g(g), b(b), a(a) {};
+		};
 
-		// SOMETHING ABOUT DRAWING UKNO? hand over an asset? hand over vertices? hand over shaders?
+		class Primitive
+		{
+		public:
+			virtual void Render() = 0;
+			Point Position;
+			Color Color;
+			// TODO texture
+		};
+
+		class Polygon : public Primitive
+		{
+		public:
+			std::vector<Point> Points;
+			void Render();
+		};
+
+		class Circle : public Primitive
+		{
+		public:
+			double Radius;
+			void Render();
+		};
+
+		extern void(*InitializeWindow)(const WindowStruct& window);
+		extern void(*TestDrawTriangle)();
 
 	}
 }

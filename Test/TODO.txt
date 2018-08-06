@@ -1,0 +1,5 @@
+todo list of things i know i should test already
+
+IF engine has alot of tasks running:
+	compare tasks with atomic parent-counter or mutex for decrement (currently former)
+

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Amaneshi/External/Graphics_GLFW.hpp>
+#include <Amaneshi/External/Setup_GLFW.hpp>
 #include <Amaneshi/External/Input_Interface.hpp>
 
 #include <Choose_Game.h>
@@ -9,12 +9,11 @@ int main()
 {
 	//std::cout << (int) nullptr << std::endl; std::cout << ((char) nullptr == '\0') << std::endl;
 	//while (true);
-	amaneshi::glfw::HookToAmaneshi();
 	amaneshi::graphics::WindowStruct window;
 	window.width = 600;
 	window.height = 400;
 	window.title = "Hello World!";
-	amaneshi::graphics::Initialize(window);
+	amaneshi::graphics::InitializeWindow(window);
 
 	while (true) 
 	{

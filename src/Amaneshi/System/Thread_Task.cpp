@@ -15,15 +15,15 @@ amaneshi::thread::Task::Task()
 
 void amaneshi::thread::Task::BlockIfPendingParents()
 {
-		std::unique_lock<std::mutex> lock(this->Mutex);
+	std::unique_lock<std::mutex> lock(this->Mutex);
 	if (this->PendingParents > 0) {
-		this->CV.wait(lock);
-		
+		this->CV.wait(lock);	
 	}
 }
 
 void amaneshi::thread::Task::ClearOneParent()
 {
+	// David: stick with atomic int... if you have MANY parents for a task.
 	this->PendingParents--;
 	if (this->PendingParents == 0) {
 		std::unique_lock<std::mutex> lock(this->Mutex);

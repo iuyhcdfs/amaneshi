@@ -4,4 +4,3 @@
 // or hypothetically you'd optimise with some variant
 
 // all hypothetical yes
-

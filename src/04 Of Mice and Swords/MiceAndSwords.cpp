@@ -3,11 +3,12 @@
 #ifdef MICE_AND_SWORDS
 
 int main() {
-	// ACCESS MULTIPLE KEYBOARDS/MICE via some driver magic
+	// control sword in a fps?
+	// while swinging you can strafe
+	// or you can lock onto what you click
 
-	// then make it control a sword around a player!
-
-	// then make it fun. see if people want this.
+	// or platform fighter where you aim the mouse nidhogg style
+	// and read from multiple mouse/keyboards
 }
 
 

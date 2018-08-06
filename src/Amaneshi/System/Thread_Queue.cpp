@@ -24,4 +24,6 @@ void amaneshi::thread::TaskQueue::Produce(Task * task)
 {
 	std::unique_lock<std::mutex> lock(this->Mutex);
 	Queue.push(task);
+	lock.unlock();
+	this->CV.notify_one();
 }

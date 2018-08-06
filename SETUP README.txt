@@ -1,5 +1,31 @@
-visual studio 2017
+setup stuff is below the "==========="
+
+until then, ill explain the folder structure:
+
+numbered folders are for some example games.
+or actually perhaps, serious prototypes.
+a clumsy game-to-compile selection is currently done via Choose_Game.h
+
+inside amaneshi is the actual engine:
+	debug contains testing/debug 
+	external contains interfaces to anything handled in another library
+	system contains internal code that isn't game-agnostic (e.g. threading)
+
+	There is a "*" named folder related to every Game_*.hpp header.
+	Implementations and convenient configurations all go in there
+
+	The Engine_*.hpp headers are convenient includes to tie everything together.
+	if this became serious business i'd end up with Engine_PlatformName.hpp
+	of course if i haven't moved back to unreal/unity by then, something's wrong :P
+
+	---Ideally, you just include Engine_Standard.hpp in the game---
+
+======================
+
+I hooked up glew and glfw in visual studio 2017
 https://www.youtube.com/watch?v=gCkcP0GcCe0
+
+but the visual studio project files remember. as long as they didnt get gitignored ahem
 
 got glew, got glfw, 
 put in folder called external
