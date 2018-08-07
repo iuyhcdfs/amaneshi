@@ -6,7 +6,8 @@ namespace amaneshi
 {
 	namespace input	
 	{
-		enum class Key {
+		enum Key 
+		{
 			Mouse0, Mouse1, Mouse2,
 			A, B, C, D, E, F, G, H, I, J, K, L, M,
 			N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
@@ -15,27 +16,47 @@ namespace amaneshi
 			Enter, Backspace, Home, End, Insert, Delete, PageUp, PageDown,
 			Up, Down, Left, Right,
 			F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12,
+			Invalid,
+
+			KeyEnumSize // must be last to represent the size
+		};
+
+		struct Buffer
+		{
+			bool Current;
+			// bool Previous;
+			// bool Switched;
 		};
 
 		struct MouseStruct
 		{
 			double x;
 			double y;
+			// double z;???!? just kidding
 		};
-		extern MouseStruct Mouse;
-		
-		void AddKeyListener(Key key, std::function<void> callback);
 
-		// detect key pressed, held, released?
-		
+		extern std::string Library;
+		extern MouseStruct Mouse;
+		extern std::vector<Buffer> KeyBuffer;
+		extern std::vector<std::function<void(void)>> KeyCallback;
+		extern std::vector<std::function<void(void)>> KeyReleaseCallback;
+
+		void PollInput();
+		void UpdateKeyInput(Key key, bool state);
+		bool IsKeyOn(Key key);
+		bool HasKeySwitched(Key key);
+
+		// void AddKeyListener(stuff, callback);
+		//MouseStruct FpsMouseReset();
+
 	}
 }
 
 /*
 
 in case you accidentally edit and too far to fix with git
-
-enum class Key {
+enum Key
+{
 Mouse0, Mouse1, Mouse2,
 A, B, C, D, E, F, G, H, I, J, K, L, M,
 N, O, P, Q, R, S, T, U, V, W, X, Y, Z,
@@ -44,6 +65,9 @@ Esc, Tab, CapsLock, Shift, CtrlL, CtrlR, AltL, AltR, Space,
 Enter, Backspace, Home, End, Insert, Delete, PageUp, PageDown,
 Up, Down, Left, Right,
 F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12,
+Invalid,
+
+KeyEnumSize // must be last to represent the size
 };
 
 */

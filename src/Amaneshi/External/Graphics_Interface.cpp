@@ -7,8 +7,13 @@ namespace amaneshi
 	namespace graphics 
 	{
 
-		void(*InitializeWindow)(const WindowStruct& windowParams);
-		void(*TestDrawTriangle)();
+		void InitializeWindow(const WindowStruct& windowParams)
+		{
+		}
+		void TestDrawTriangle()
+		{
+
+		}
 
 	}
 }

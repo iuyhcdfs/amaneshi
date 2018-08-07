@@ -10,6 +10,13 @@ namespace amaneshi
 {
 	namespace glfw 
 	{
-		void HookToAmaneshi();
+		void StartGlfw();
+		void InitializeWindow(const amaneshi::graphics::WindowStruct& window);
+		void PrintOpenGLVersion();
+		void SetAmaneshiGraphics();
+		void SetAmaneshiInput();
+		void CallbackMouseButton(GLFWwindow* window, int button, int action, int mods);
+		void CallbackMousePosition(GLFWwindow* window, double xpos, double ypos);
+		void CallbackKeyboard(GLFWwindow* window, int key, int scancode, int action, int mods);
 	}
 }
