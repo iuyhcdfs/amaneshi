@@ -3,9 +3,11 @@
 #include <Amaneshi/External/Setup_GLFW.hpp>
 #include <Amaneshi/External/Graphics_Interface.hpp>
 #include <Amaneshi/External/Graphics_Primitives.hpp>
+#include <Amaneshi/External/OpenGLShaders/HelloWorld.hpp>
 namespace amaneshi
 {
 	graphics::WindowStruct window;
+	graphics::Polygon hello;
 
 	void TempSetup()
 	{
@@ -17,22 +19,20 @@ namespace amaneshi
 		window.title = "hello amaneshi";
 		window.fullscreen = false;
 		graphics::InitializeWindow(window);
-	
-		graphics::Polygon hello;
-		hello.Points.push_back(graphics::Point(0.1, 0.1));
-		hello.Points.push_back(graphics::Point(0.2, 0.2));
+		
+		hello.GLShader = amaneshi::opengl::HelloWorld();
+		hello.Points.push_back(graphics::Point(-0.1, -0.1));
+		hello.Points.push_back(graphics::Point(-0.1, 0.4));
 		hello.Points.push_back(graphics::Point(0.2, 0.4));
-		hello.Points.push_back(graphics::Point(0.4, 0.3));
-		hello.Points.push_back(graphics::Point(0.4, 0.1));
-		hello.CompileShaders();
-		while (1)
-		{
-			// draw triangle
-			hello.Render();
-			// put on screen
-			graphics::UpdateWindow();
-		}
-
+		hello.Points.push_back(graphics::Point(0.8, 0.0));
+		hello.Points.push_back(graphics::Point(-0.4, 0.0));
+		hello.CompileShaders();	
 	}
-	
+	void TempUpdate()
+	{
+		// draw triangle
+		hello.Render();
+		// put on screen
+		graphics::UpdateWindow();
+	}
 }

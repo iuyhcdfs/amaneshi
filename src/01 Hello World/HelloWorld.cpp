@@ -7,11 +7,9 @@
 int main() 
 {
 	amaneshi::TempSetup();
-
 	while (true) 
 	{
-		
-		
+		amaneshi::TempUpdate();
 	}
 }
 #endif

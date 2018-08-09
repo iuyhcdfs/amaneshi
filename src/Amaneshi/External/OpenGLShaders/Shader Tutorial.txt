@@ -1,3 +1,9 @@
+
+check out helloworld.fs/vs/hpp
+
+the hpp will always have a function that returns the shader name
+
+the way i'm bringing fs and vs files into the project is the 2nd top response here:
 https://stackoverflow.com/questions/20443560/how-to-practically-ship-glsl-shaders-with-your-c-software
 
 basically, with c++11 raw string literals

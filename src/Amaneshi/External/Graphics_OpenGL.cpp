@@ -6,23 +6,14 @@ namespace amaneshi
 {
 	namespace opengl
 	{
-		void PolygonShader::CompileShaders(std::vector<amaneshi::graphics::Point> pointVector)
+		void PolygonShader::CompileShaders()
 		{
-			this->PointSize = pointVector.size();
-			float * points = new float[this->PointSize * 3];
-			int i = 0;
-			for (auto p : pointVector)
-			{
-				points[i++] = p.x;
-				points[i++] = p.y;
-				points[i++] = p.z;
-			}
 			const char * vs = VertexString.c_str();
 			const char * fs = FragmentString.c_str();
 
 			glGenBuffers(1, &this->VertexBufferObject);
 			glBindBuffer(GL_ARRAY_BUFFER, this->VertexBufferObject);
-			glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), points, GL_STATIC_DRAW);
+			glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), this->Points, GL_STATIC_DRAW);
 			
 			// vertex array?
 			this->VertexArrayObject = 0;
@@ -55,7 +46,7 @@ namespace amaneshi
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glUseProgram(this->ShaderProgram);
 			glBindVertexArray(this->VertexArrayObject);
-			glDrawArrays(GL_TRIANGLES, 0, PointSize);
+			glDrawArrays(GL_TRIANGLES, 0, PointCount);
 		}
 
 

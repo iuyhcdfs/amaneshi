@@ -50,12 +50,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\System\Thread_Job.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -128,9 +122,18 @@
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Amaneshi\0 Debug\Debug_Log.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\0 Debug\Debug_Test.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Test\TODO.txt" />
-    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader README.txt" />
+    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Tutorial.txt" />
   </ItemGroup>
 </Project>

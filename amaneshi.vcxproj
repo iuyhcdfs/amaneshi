@@ -32,8 +32,8 @@
     <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp" />
-    <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp" />
+    <ClInclude Include="src\Amaneshi\0 Debug\Debug_Log.hpp" />
+    <ClInclude Include="src\Amaneshi\0 Debug\Debug_Test.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Standard.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
@@ -44,6 +44,7 @@
     <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_OpenGL.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs" />
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs" />
     <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\System\Time_Clock.hpp" />
@@ -60,7 +61,7 @@
     <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader README.txt" />
+    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Tutorial.txt" />
     <Text Include="Test\TODO.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

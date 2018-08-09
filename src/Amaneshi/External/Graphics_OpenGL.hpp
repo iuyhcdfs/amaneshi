@@ -10,23 +10,34 @@ namespace amaneshi
 	{
 		// opengl unique stuff... its basically raw shaders n stuff
 		
-
-		struct PolygonShader
+		class Shader
 		{
+		protected:
+			Shader() {};
+		public:
+			// int id?
+			
 			std::string VertexString;
 			std::string FragmentString;
-
-			//int ID;  //abstract our own ids?
-			GLsizei PointSize;
+			
 			GLuint ShaderProgram;
 			GLuint VertexBufferObject;
 			GLuint VertexArrayObject;
 			GLuint VertexShader;
 			GLuint FragmentShader;
 
-			void CompileShaders(std::vector<amaneshi::graphics::Point> points);
-			void Draw();
+			virtual void CompileShaders() = 0;
+			virtual void Draw() = 0;
+		};
 
+		class PolygonShader : public Shader
+		{
+		public:
+			GLuint PointCount;
+			float * Points;
+
+			void CompileShaders() override;
+			void Draw() override;
 		};
 
 
