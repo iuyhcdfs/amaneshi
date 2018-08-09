@@ -8,9 +8,9 @@ namespace amaneshi
 	{
 		std::string Library;
 		MouseStruct Mouse;
-		std::vector<Buffer> KeyBuffer;
-		std::vector<std::function<void(void)>> KeyCallback(KeyEnumSize); //= std::vector<std::function<void(void)>>(KeyEnumSize);
-		std::vector<std::function<void(void)>> KeyReleaseCallback(KeyEnumSize);
+		static std::vector<Buffer> KeyBuffer;
+		static std::vector<std::function<void(void)>> KeyCallback(KeyEnumSize); //= std::vector<std::function<void(void)>>(KeyEnumSize);
+		static std::vector<std::function<void(void)>> KeyReleaseCallback(KeyEnumSize);
 
 		void PollInput()
 		{
@@ -23,6 +23,7 @@ namespace amaneshi
 		{
 			if (state == true)
 			{
+				std::cout << "key pressed" << std::endl;
 				KeyBuffer[key].Current = true;
 				if (KeyCallback[key])
 				{
@@ -31,6 +32,7 @@ namespace amaneshi
 			}
 			else if (state == false)
 			{
+				std::cout << "key released" << std::endl;
 				KeyBuffer[key].Current = false;
 				if (KeyReleaseCallback[key])
 				{

@@ -21,8 +21,10 @@
   <ItemGroup>
     <ClCompile Include="src\03 Go\Go.cpp" />
     <ClCompile Include="src\04 Of Mice and Swords\MiceAndSwords.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp" />
     <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Graphics_OpenGL.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp" />
     <ClCompile Include="src\02 Not Air Hockey\NotAirHockey.cpp" />
@@ -33,11 +35,16 @@
     <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp" />
     <ClInclude Include="src\Amaneshi\Debug\Debug_Test.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Standard.hpp" />
+    <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Primitives.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Graphics_Vulkan.hpp" />
     <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Graphics_OpenGL.hpp" />
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs" />
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs" />
     <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\System\Time_Clock.hpp" />
     <ClInclude Include="src\Amaneshi\System\Time_FPS.hpp" />
@@ -53,6 +60,7 @@
     <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader README.txt" />
     <Text Include="Test\TODO.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -42,6 +42,12 @@
     <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Amaneshi\External\Graphics_OpenGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Amaneshi\Debug\Debug_Log.hpp">
@@ -107,8 +113,24 @@
     <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Graphics_OpenGL.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Graphics_Vulkan.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Engine_Temp.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Test\TODO.txt" />
+    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader README.txt" />
   </ItemGroup>
 </Project>

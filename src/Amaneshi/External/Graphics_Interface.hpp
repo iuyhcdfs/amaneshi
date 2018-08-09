@@ -8,7 +8,7 @@ namespace amaneshi
 	namespace graphics 
 	{
 		extern std::string Library;
-
+		extern std::string API;
 		struct WindowStruct 
 		{
 			int width;
@@ -18,6 +18,8 @@ namespace amaneshi
 		};
 
 		void InitializeWindow (const WindowStruct& window);
+		void UpdateWindow();
+
 		void TestDrawTriangle ();
 
 	}

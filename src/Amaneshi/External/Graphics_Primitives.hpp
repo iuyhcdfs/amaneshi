@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Graphics_OpenGL.hpp"
+
 #include <vector>
 
 namespace amaneshi
@@ -7,8 +9,9 @@ namespace amaneshi
 	namespace graphics
 	{
 
-		struct Point
+		class Point
 		{
+		public:
 			double x;
 			double y;
 			double z;
@@ -41,6 +44,8 @@ namespace amaneshi
 		{
 		public:
 			std::vector<Point> Points;
+			amaneshi::opengl::PolygonShader GLShader;
+			void CompileShaders();
 			void Render();
 		};
 

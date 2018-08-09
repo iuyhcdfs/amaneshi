@@ -37,12 +37,14 @@ namespace amaneshi
 
 		extern std::string Library;
 		extern MouseStruct Mouse;
-		extern std::vector<Buffer> KeyBuffer;
-		extern std::vector<std::function<void(void)>> KeyCallback;
-		extern std::vector<std::function<void(void)>> KeyReleaseCallback;
+
+		// static in it's cpp file
+		//extern std::vector<Buffer> KeyBuffer;
+		//extern std::vector<std::function<void(void)>> KeyCallback;
+		//extern std::vector<std::function<void(void)>> KeyReleaseCallback;
 
 		void PollInput();
-		void UpdateKeyInput(Key key, bool state);
+		void UpdateKeyState(Key key, bool state);
 		bool IsKeyOn(Key key);
 		bool HasKeySwitched(Key key);
 
