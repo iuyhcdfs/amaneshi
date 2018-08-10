@@ -32,10 +32,10 @@ namespace amaneshi
 			glShaderSource(this->FragmentShader, 1, &fs, NULL);
 			glCompileShader(this->FragmentShader);
 
-			// the heck is a program
+			// shaders need to join this
 			this->ShaderProgram = glCreateProgram();
-			glAttachShader(this->ShaderProgram, this->FragmentShader);
 			glAttachShader(this->ShaderProgram, this->VertexShader);
+			glAttachShader(this->ShaderProgram, this->FragmentShader);
 			glLinkProgram(this->ShaderProgram);
 		}
 

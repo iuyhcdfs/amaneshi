@@ -21,11 +21,9 @@ namespace amaneshi
 		graphics::InitializeWindow(window);
 		
 		hello.GLShader = amaneshi::opengl::HelloWorld();
-		hello.Points.push_back(graphics::Point(-0.1, -0.1));
-		hello.Points.push_back(graphics::Point(-0.1, 0.4));
-		hello.Points.push_back(graphics::Point(0.2, 0.4));
-		hello.Points.push_back(graphics::Point(0.8, 0.0));
-		hello.Points.push_back(graphics::Point(-0.4, 0.0));
+		hello.Points.push_back(graphics::Point(-0.5, -0.5, 0.0));
+		hello.Points.push_back(graphics::Point(0.3, 0.8, 0.0));
+		hello.Points.push_back(graphics::Point(0.6, -0.7, 0.0));
 		hello.CompileShaders();	
 	}
 	void TempUpdate()
