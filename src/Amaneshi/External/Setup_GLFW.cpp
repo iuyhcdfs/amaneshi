@@ -135,7 +135,7 @@ namespace amaneshi {
 			amaneshi::input::Key amaneshiKey;
 			{
 				using namespace amaneshi::input;
-				switch (scancode)
+				switch (key)
 				{
 				case GLFW_KEY_0: amaneshiKey = Num0; break;
 				case GLFW_KEY_1: amaneshiKey = Num1; break;
