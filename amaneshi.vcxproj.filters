@@ -42,10 +42,10 @@
     <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\External\Graphics_OpenGL.cpp">
+    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp">
+    <ClCompile Include="src\Amaneshi\External\Setup_OpenGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,12 +107,6 @@
     <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\Graphics_OpenGL.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\Graphics_Vulkan.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -129,6 +123,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Engine_Public.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Setup_OpenGL.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

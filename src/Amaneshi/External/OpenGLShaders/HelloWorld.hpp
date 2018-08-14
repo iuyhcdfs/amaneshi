@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Graphics_OpenGL.hpp"
+#include "../Setup_OpenGL.hpp"
 #include <iostream>
 
 namespace amaneshi

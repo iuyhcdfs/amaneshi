@@ -1,6 +1,6 @@
 #include <string>
 #include "Graphics_Primitives.hpp"
-#include "Graphics_OpenGL.hpp"
+#include "Setup_OpenGL.hpp"
 
 namespace amaneshi
 {

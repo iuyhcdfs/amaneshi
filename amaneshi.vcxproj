@@ -24,7 +24,7 @@
     <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp" />
     <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Graphics_OpenGL.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Setup_OpenGL.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp" />
     <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp" />
     <ClCompile Include="src\02 Not Air Hockey\NotAirHockey.cpp" />
@@ -34,15 +34,16 @@
   <ItemGroup>
     <ClInclude Include="src\Amaneshi\0 Debug\Debug_Log.hpp" />
     <ClInclude Include="src\Amaneshi\0 Debug\Debug_Test.hpp" />
+    <ClInclude Include="src\Amaneshi\Engine_Public.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Standard.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Primitives.hpp" />
-    <ClInclude Include="src\Amaneshi\External\Graphics_Vulkan.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp" />
     <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\External\Graphics_OpenGL.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Setup_OpenGL.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs" />

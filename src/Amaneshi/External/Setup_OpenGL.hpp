@@ -41,6 +41,18 @@ namespace amaneshi
 			void Draw() override;
 		};
 
+		/*class CircleShader : public Shader
+		{
+		public:
+			float Location;
+			float radius;
+			GLuint Dimensions = 2;
+			GLuint Resolution;
+
+			void CompileShaders() override;
+			void Draw() override;
+		};*/
+
 
 	} // namespace opengl
 } // namespace amaneshi

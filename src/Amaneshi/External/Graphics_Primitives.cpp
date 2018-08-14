@@ -29,7 +29,7 @@ void amaneshi::graphics::Polygon::Render()
 	}
 }
 
-void amaneshi::graphics::Circle::Render()
-{
-
-}
+//void amaneshi::graphics::Circle::Render()
+//{
+//
+//}

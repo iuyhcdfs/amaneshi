@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Graphics_OpenGL.hpp"
+#include "Setup_OpenGL.hpp"
 
 #include <vector>
 
@@ -34,6 +34,7 @@ namespace amaneshi
 		class Primitive
 		{
 		public:
+			virtual void CompileShaders() = 0;
 			virtual void Render() = 0;
 			Point Position;
 			Color Color;
@@ -45,16 +46,19 @@ namespace amaneshi
 		public:
 			std::vector<Point> Points;
 			amaneshi::opengl::PolygonShader GLShader;
-			void CompileShaders();
-			void Render();
+			void CompileShaders() override;
+			void Render() override;
 		};
 
+		/*
 		class Circle : public Primitive
 		{
 		public:
 			double Radius;
-			void Render();
+			amaneshi::opengl::CircleShader GLShader;
+			void CompileShaders() override;
+			void Render() override;
 		};
-
+		*/
 	}
 }
