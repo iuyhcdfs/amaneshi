@@ -13,7 +13,10 @@ namespace amaneshi
 
 			glGenBuffers(1, &this->VertexBufferObject);
 			glBindBuffer(GL_ARRAY_BUFFER, this->VertexBufferObject);
-			glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), this->Points, GL_STATIC_DRAW);
+			glBufferData(GL_ARRAY_BUFFER, 
+						 this->PointCount * this->Dimensions * sizeof(float), 
+						 this->Points, 
+						 GL_STATIC_DRAW);
 			
 			// vertex array?
 			this->VertexArrayObject = 0;
@@ -46,7 +49,7 @@ namespace amaneshi
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glUseProgram(this->ShaderProgram);
 			glBindVertexArray(this->VertexArrayObject);
-			glDrawArrays(GL_TRIANGLES, 0, PointCount);
+			glDrawArrays(GL_TRIANGLE_STRIP, 0, PointCount);
 		}
 
 

@@ -2,9 +2,9 @@
 #include <iostream>
 #include <GLFW/glfw3.h>
 
-// im depreciated. 
 
-// i need to be in.. utility? ooh how about debug or testing
+// DONT USE THIS CODE
+// im depreciated. 
 
 namespace amaneshi {
 

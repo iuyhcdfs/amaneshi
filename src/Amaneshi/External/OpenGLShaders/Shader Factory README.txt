@@ -1,4 +1,10 @@
+i thought this hacky version was cool okay
 
+if a dev wants to experiment with shaders, there are online glsl sandboxes
+
+this is less error prone since the compiler will see us mis-spell a function
+also faster since the file is "read" during compile time.
+============================
 check out helloworld.fs/vs/hpp
 
 the hpp will always have a function that returns the shader name

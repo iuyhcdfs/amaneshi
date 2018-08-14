@@ -34,6 +34,7 @@ namespace amaneshi
 		{
 		public:
 			GLuint PointCount;
+			GLuint Dimensions = 3;
 			float * Points;
 
 			void CompileShaders() override;

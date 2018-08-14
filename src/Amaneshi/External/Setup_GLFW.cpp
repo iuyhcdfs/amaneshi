@@ -21,8 +21,12 @@ namespace amaneshi {
 
 		void StartGLFW()
 		{
+			if (!glfwInit())
+			{
+				std::cerr << "ERROR: glfwInit failed" << std::endl;
+				return;
+			}
 			SetAmaneshiGraphics();
-			SetAmaneshiInput();
 		}
 
 		void InitializeWindow(const amaneshi::graphics::WindowStruct& window) {
@@ -31,16 +35,11 @@ namespace amaneshi {
 				return;
 			}
 
-			if ( !glfwInit() ) 
-			{
-				std::cerr << "ERROR: glfwInit failed" << std::endl;
-				return;
-			}
-
 			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 			glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+			
 			Window = glfwCreateWindow(window.width, window.height, window.title.c_str(), NULL, NULL);
 			if (!Window) 
 			{
@@ -49,6 +48,8 @@ namespace amaneshi {
 				return;
 			}
 			glfwMakeContextCurrent(Window);
+
+			SetAmaneshiInput();
 
 			glewExperimental = GL_TRUE;
 			GLenum err = glewInit();

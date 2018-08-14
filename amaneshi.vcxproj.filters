@@ -134,6 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Test\TODO.txt" />
-    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Tutorial.txt" />
+    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Factory README.txt" />
   </ItemGroup>
 </Project>

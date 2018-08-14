@@ -61,7 +61,7 @@
     <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Tutorial.txt" />
+    <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Factory README.txt" />
     <Text Include="Test\TODO.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

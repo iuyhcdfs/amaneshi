@@ -8,7 +8,7 @@ namespace amaneshi
 	{
 		std::string Library;
 		MouseStruct Mouse;
-		static std::vector<Buffer> KeyBuffer;
+		static std::vector<Buffer> KeyBuffer(KeyEnumSize);
 		static std::vector<std::function<void(void)>> KeyCallback(KeyEnumSize); //= std::vector<std::function<void(void)>>(KeyEnumSize);
 		static std::vector<std::function<void(void)>> KeyReleaseCallback(KeyEnumSize);
 

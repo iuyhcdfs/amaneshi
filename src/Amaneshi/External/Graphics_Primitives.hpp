@@ -37,7 +37,7 @@ namespace amaneshi
 			virtual void Render() = 0;
 			Point Position;
 			Color Color;
-			// TODO texture
+			// TODO do I contain textures or is that still passed to the shader struct?
 		};
 
 		class Polygon : public Primitive
