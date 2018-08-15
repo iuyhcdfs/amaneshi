@@ -19,11 +19,11 @@ namespace amaneshi
 				glfwPollEvents();
 			}
 		}
-		void UpdateKeyState(Key key, bool state)
+		void UpdateKeyState(KeyEnum key, bool state)
 		{
 			if (state == true)
 			{
-				//std::cout << key << " pressed" << std::endl;
+				std::cout << key << " pressed" << std::endl;
 				KeyBuffer[key].Current = true;
 				if (KeyCallback[key])
 				{
@@ -32,7 +32,7 @@ namespace amaneshi
 			}
 			else if (state == false)
 			{
-				//std::cout << key << " released" << std::endl;
+				std::cout << key << " released" << std::endl;
 				KeyBuffer[key].Current = false;
 				if (KeyReleaseCallback[key])
 				{
@@ -41,12 +41,12 @@ namespace amaneshi
 			}
 		}
 
-		bool IsKeyOn(Key key)
+		bool IsKeyOn(KeyEnum key)
 		{
 			return KeyBuffer[key].Current;
 		}
 
-		bool HasKeySwitched(Key key)
+		bool HasKeySwitched(KeyEnum key)
 		{
 			return false; //KeyBuffer[key].Switched;
 		}

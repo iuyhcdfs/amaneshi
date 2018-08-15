@@ -6,7 +6,7 @@ namespace amaneshi
 {
 	namespace input	
 	{
-		enum Key 
+		enum KeyEnum 
 		{
 			Mouse0, Mouse1, Mouse2,
 			A, B, C, D, E, F, G, H, I, J, K, L, M,
@@ -44,9 +44,9 @@ namespace amaneshi
 		//extern std::vector<std::function<void(void)>> KeyReleaseCallback;
 
 		void PollInput();
-		void UpdateKeyState(Key key, bool state);
-		bool IsKeyOn(Key key);
-		bool HasKeySwitched(Key key);
+		void UpdateKeyState(KeyEnum key, bool state);
+		bool IsKeyOn(KeyEnum key);
+		bool HasKeySwitched(KeyEnum key);
 
 		// void AddKeyListener(stuff, callback);
 		//MouseStruct FpsMouseReset();

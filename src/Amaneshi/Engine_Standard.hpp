@@ -4,3 +4,9 @@
 // or hypothetically you'd optimise with some variant
 
 // all hypothetical yes
+
+namespace amaneshi
+{
+	void StandardInitialize();
+	void StandardStart(/* FUTURE: gameworld struct  */);
+}

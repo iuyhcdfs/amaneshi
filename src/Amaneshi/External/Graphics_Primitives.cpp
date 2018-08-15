@@ -1,6 +1,7 @@
 #include "Graphics_Primitives.hpp"
 #include "Graphics_Interface.hpp"
 
+#include <Amaneshi/Math/Math_Position.hpp>
 
 static const int Temp_dimensionCount = 3;
 
@@ -11,7 +12,7 @@ void amaneshi::graphics::Polygon::CompileShaders()
 		GLShader.PointCount = this->Points.size();
 		GLShader.Points = new float[GLShader.PointCount * Temp_dimensionCount];
 		int i = 0;
-		for (Point p : this->Points)
+		for (amaneshi::math::Point p : this->Points)
 		{
 			GLShader.Points[i++] = p.x;
 			GLShader.Points[i++] = p.y;

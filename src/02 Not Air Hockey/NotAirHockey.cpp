@@ -5,13 +5,11 @@
 #ifdef NOT_AIR_HOCKEY
 
 int main() {
-	// have tasks for spawning circles with a click
-	
-	// maybe click drag an arrow
-	// populate screen... spawn only if possible
-	// right click to delete
 
-	// thats it.
+	// lots of floating colliding objects.
+
+	// we might control an object that can swing at them.
+
 }
 
 

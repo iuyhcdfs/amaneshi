@@ -48,6 +48,9 @@
     <ClCompile Include="src\Amaneshi\External\Setup_OpenGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Amaneshi\Engine_Standard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Amaneshi\System\Thread_Job.hpp">
@@ -68,16 +71,10 @@
     <ClInclude Include="src\Amaneshi\Game_Object.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_Renderer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\Game_World.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\Game_Physics.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_Updatable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\System\Time_FPS.hpp">
@@ -125,13 +122,28 @@
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Engine_Public.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Setup_OpenGL.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Graphics_Camera.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Game_Updatable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Game_Renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\World\Subspace.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Math\Math_Rotation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Math\Math_Position.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

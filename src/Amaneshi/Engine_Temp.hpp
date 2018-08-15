@@ -4,6 +4,11 @@
 #include <Amaneshi/External/Graphics_Interface.hpp>
 #include <Amaneshi/External/Graphics_Primitives.hpp>
 #include <Amaneshi/External/OpenGLShaders/HelloWorld.hpp>
+
+// a temp engine setup just to make helloworld work
+
+// engine standard will be more general and accomodating for any single-windowed game
+
 namespace amaneshi
 {
 	graphics::WindowStruct window;
@@ -21,19 +26,19 @@ namespace amaneshi
 		graphics::InitializeWindow(window);
 		
 		hello.GLShader = amaneshi::opengl::HelloWorld();
-		/*hello.Points.push_back(graphics::Point(-0.8, -0.8, 0.0));
-		hello.Points.push_back(graphics::Point(-0.5, 0.8, 0.0));
-		hello.Points.push_back(graphics::Point(0.6, -0.7, 0.0));
-		hello.Points.push_back(graphics::Point(1, 0, 0.0));
-		hello.Points.push_back(graphics::Point(0.5, 1, 0.0));*/
-		hello.Points.push_back(graphics::Point(-0.5, -0.5, 0.0));
-		hello.Points.push_back(graphics::Point(-0.5, 0.5, 0.0));
-		hello.Points.push_back(graphics::Point(-0.2, 0.5, 0.0));
-		hello.Points.push_back(graphics::Point(-0.2, 0.0, 0.0));
-		hello.Points.push_back(graphics::Point(0.2, 0.0, 0.0));
-		hello.Points.push_back(graphics::Point(0.2, 0.5, 0.0));
-		hello.Points.push_back(graphics::Point(0.5, 0.5, 0.0));
-		hello.Points.push_back(graphics::Point(0.5, -0.8, 0.0));
+		/*hello.Points.push_back(amaneshi::math::::Point(-0.8, -0.8, 0.0));
+		hello.Points.push_back(amaneshi::math::Point(-0.5, 0.8, 0.0));
+		hello.Points.push_back(amaneshi::math::Point(0.6, -0.7, 0.0));
+		hello.Points.push_back(amaneshi::math::Point(1, 0, 0.0));
+		hello.Points.push_back(amaneshi::math::Point(0.5, 1, 0.0));*/
+		hello.Points.push_back(amaneshi::math::Point(-0.5, -0.5,  0.0));
+		hello.Points.push_back(amaneshi::math::Point(-0.5,  0.5,  0.0));
+		hello.Points.push_back(amaneshi::math::Point(-0.2,  0.5,  0.0));
+		hello.Points.push_back(amaneshi::math::Point(-0.2,  0.0,  0.0));
+		hello.Points.push_back(amaneshi::math::Point( 0.2,  0.0,  0.0));
+		hello.Points.push_back(amaneshi::math::Point( 0.2,  0.5,  0.0));
+		hello.Points.push_back(amaneshi::math::Point( 0.5,  0.5,  0.0));
+		hello.Points.push_back(amaneshi::math::Point( 0.5, -0.8,  0.0));
 		hello.CompileShaders();	
 	}
 	void TempUpdate()

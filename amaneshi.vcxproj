@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\03 Go\Go.cpp" />
     <ClCompile Include="src\04 Of Mice and Swords\MiceAndSwords.cpp" />
+    <ClCompile Include="src\Amaneshi\Engine_Standard.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp" />
     <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
@@ -34,10 +35,10 @@
   <ItemGroup>
     <ClInclude Include="src\Amaneshi\0 Debug\Debug_Log.hpp" />
     <ClInclude Include="src\Amaneshi\0 Debug\Debug_Test.hpp" />
-    <ClInclude Include="src\Amaneshi\Engine_Public.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Standard.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Graphics_Camera.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Primitives.hpp" />
     <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp" />
@@ -48,6 +49,9 @@
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs" />
     <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp" />
+    <ClInclude Include="src\Amaneshi\Math\Math_Position.hpp" />
+    <ClInclude Include="src\Amaneshi\Math\Math_Rotation.hpp" />
+    <ClInclude Include="src\Amaneshi\World\Subspace.hpp" />
     <ClInclude Include="src\Amaneshi\System\Time_Clock.hpp" />
     <ClInclude Include="src\Amaneshi\System\Time_FPS.hpp" />
     <ClInclude Include="src\Amaneshi\Game_Object.hpp" />

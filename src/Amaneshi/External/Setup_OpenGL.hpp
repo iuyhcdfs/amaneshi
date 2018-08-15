@@ -44,7 +44,7 @@ namespace amaneshi
 		/*class CircleShader : public Shader
 		{
 		public:
-			float Location;
+			float position;
 			float radius;
 			GLuint Dimensions = 2;
 			GLuint Resolution;

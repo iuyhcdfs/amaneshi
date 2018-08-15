@@ -1,25 +1,13 @@
 #pragma once
 
 #include "Setup_OpenGL.hpp"
-
+#include <Amaneshi/Math/Math_Position.hpp>
 #include <vector>
 
 namespace amaneshi
 {
 	namespace graphics
 	{
-
-		class Point
-		{
-		public:
-			double x;
-			double y;
-			double z;
-			Point() : x(0), y(0), z(0) {};
-			Point(double x, double y) : x(x), y(y), z(0) {};
-			Point(double x, double y, double z) : x(x), y(y), z(z) {};
-		};
-
 		struct Color
 		{
 			double r;
@@ -36,7 +24,7 @@ namespace amaneshi
 		public:
 			virtual void CompileShaders() = 0;
 			virtual void Render() = 0;
-			Point Position;
+			amaneshi::math::Point Position;
 			Color Color;
 			// TODO do I contain textures or is that still passed to the shader struct?
 		};
@@ -44,7 +32,7 @@ namespace amaneshi
 		class Polygon : public Primitive
 		{
 		public:
-			std::vector<Point> Points;
+			std::vector<amaneshi::math::Point> Points;
 			amaneshi::opengl::PolygonShader GLShader;
 			void CompileShaders() override;
 			void Render() override;

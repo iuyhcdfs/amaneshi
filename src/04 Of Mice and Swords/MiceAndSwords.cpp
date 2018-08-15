@@ -3,12 +3,9 @@
 #ifdef MICE_AND_SWORDS
 
 int main() {
-	// control sword in a fps?
-	// while swinging you can strafe
-	// or you can lock onto what you click
 
-	// or platform fighter where you aim the mouse nidhogg style
-	// and read from multiple mouse/keyboards
+	// FUTURE: make a game where the engine is reading from 2+ mice connected to a computer
+
 }
 
 

@@ -100,7 +100,7 @@ namespace amaneshi {
 
 		static void CallbackMouseButton(GLFWwindow* window, int button, int action, int mods)
 		{
-			amaneshi::input::Key amaneshiKey;
+			amaneshi::input::KeyEnum amaneshiKey;
 			{
 				using namespace amaneshi::input;
 				switch (button)
@@ -132,7 +132,7 @@ namespace amaneshi {
 
 		static void CallbackKeyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
 		{
-			amaneshi::input::Key amaneshiKey;
+			amaneshi::input::KeyEnum amaneshiKey;
 			{
 				using namespace amaneshi::input;
 				switch (key)
