@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Amaneshi/Internal/Type_Updatable.hpp>
+#include <Amaneshi/Game_Object.hpp>
 #include <string>
 namespace amaneshi
 {

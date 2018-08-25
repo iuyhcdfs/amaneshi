@@ -143,6 +143,9 @@
     <ClInclude Include="src\Amaneshi\Object\Camera.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Amaneshi\Engine_3D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Test\TODO.txt" />

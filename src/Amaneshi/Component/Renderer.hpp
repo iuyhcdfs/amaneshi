@@ -1,11 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include <Amaneshi/Internal/Game_Component.hpp>
+#include <Amaneshi/Game_Component.hpp>
 
 namespace amaneshi
 {
-	namespace Component
+	namespace component
 	{
 		// objects -> components -> anything that isnt "world"
 

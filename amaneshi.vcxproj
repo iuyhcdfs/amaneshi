@@ -32,6 +32,7 @@
     <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Amaneshi\Engine_3D.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Camera.hpp" />

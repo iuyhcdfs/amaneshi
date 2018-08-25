@@ -1,13 +1,13 @@
 #pragma once
 
-#include <Amaneshi/Math/Position.hpp>
+#include <Amaneshi/Internal/Math_Position.hpp>
 #include <Amaneshi/Game_Object.hpp>
 #include <vector>
 //#include <unordered_map>
 #include <unordered_set>
 namespace amaneshi
 {
-	namespace game
+	namespace world
 	{ 
 		// subspace just stores the general area of many objects
 		enum AxisEnum

@@ -2,7 +2,7 @@
 
 namespace amaneshi
 {
-	namespace object
+	namespace engine
 	{
 
 	}
