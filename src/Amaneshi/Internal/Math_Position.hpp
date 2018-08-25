@@ -5,8 +5,6 @@ namespace amaneshi
 	namespace math
 	{
 		
-		// typedef class Point Vector;
-		
 		class Point
 		{
 		public:

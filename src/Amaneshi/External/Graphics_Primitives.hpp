@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Setup_OpenGL.hpp"
-#include <Amaneshi/Math/Math_Position.hpp>
+#include <Amaneshi/Internal/Math_Position.hpp>
 #include <vector>
 
 namespace amaneshi

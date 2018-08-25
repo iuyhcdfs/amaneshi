@@ -1,5 +1,5 @@
 #pragma once
-#include <Amaneshi/Math/Position.hpp>
+#include <Amaneshi/Math/Math_Position.hpp>
 namespace amaneshi
 {
 	namespace graphics

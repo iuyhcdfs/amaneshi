@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Amaneshi/Math/Math_Position.hpp>
+#include <Amaneshi/Math/Position.hpp>
 #include <Amaneshi/Game_Object.hpp>
 #include <vector>
 //#include <unordered_map>
@@ -42,7 +42,10 @@ namespace amaneshi
 				}
 				return Buckets[i];
 			}
-			BucketT BucketFromFloat(float position);
+			BucketT BucketFromFloat(float position)
+			{
+				int i = position;
+			}
 		};
 
 		class Bucket

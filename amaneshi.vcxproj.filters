@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Amaneshi\System\Thread_Queue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Amaneshi\System\Thread_Task.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\01 Hello World\HelloWorld.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,7 +27,16 @@
     <ClCompile Include="src\04 Of Mice and Swords\MiceAndSwords.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Amaneshi\Internal\Thread_Queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\Internal\Thread_Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp">
@@ -42,51 +45,51 @@
     <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Amaneshi\External\Setup_OpenGL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Amaneshi\Engine_Standard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Amaneshi\System\Thread_Job.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\System\Thread_Queue.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\System\Thread_Task.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Choose_Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Engine_Standard.hpp">
+    <ClInclude Include="src\Amaneshi\Engine_Temp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_Object.hpp">
+    <ClInclude Include="src\Amaneshi\Internal\Thread_Job.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_World.hpp">
+    <ClInclude Include="src\Amaneshi\Internal\Thread_Queue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_Physics.hpp">
+    <ClInclude Include="src\Amaneshi\Internal\Thread_Task.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\System\Time_FPS.hpp">
+    <ClInclude Include="src\Amaneshi\Internal\Time_Clock.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\System\Time_Clock.hpp">
+    <ClInclude Include="src\Amaneshi\Internal\Time_FPS.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\External\fpscounter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Graphics_Camera.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\External\Graphics_Primitives.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp">
@@ -95,55 +98,49 @@
     <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\Graphics_Primitives.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\Engine_Temp.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\0 Debug\Debug_Log.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\0 Debug\Debug_Test.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Setup_OpenGL.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\External\Graphics_Camera.hpp">
+    <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_Updatable.hpp">
+    <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Game_Renderer.hpp">
+    <ClInclude Include="src\Amaneshi\Component\Physics.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Component\Renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Object\Sphere.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\World\Subspace.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Math\Math_Rotation.hpp">
+    <ClInclude Include="src\Amaneshi\Game_Component.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Math\Math_Position.hpp">
+    <ClInclude Include="src\Amaneshi\Game_Object.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Game_World.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Internal\Math_Position.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Internal\Math_Rotation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Internal\Type_Updatable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Object\Camera.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

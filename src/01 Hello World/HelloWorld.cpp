@@ -4,10 +4,11 @@
 #include <Choose_Game.h>
 
 #ifdef HELLO_WORLD
+
+#include <iostream>
 int main() 
 {
-	// use the engine *improperly* but at least make sure it's subsystems work.
-
+	// this isn't how you use the engine this is just testing components
 	amaneshi::TempSetup();
 	while (true) 
 	{

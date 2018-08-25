@@ -1,4 +1,3 @@
-#include <Amaneshi/Engine_Standard.hpp>
 #include <Choose_Game.h>
 #ifdef MICE_AND_SWORDS
 

@@ -1,16 +1,29 @@
 #pragma once
 
+#include <Amaneshi/Internal/Math_Position.hpp>
+#include <Amaneshi/Internal/Math_Rotation.hpp>
+#include <Amaneshi/Internal/Type_Updatable.hpp>
+#include <Amaneshi/Game_Component.hpp>
+#include <vector>
+#include <string>
 namespace amaneshi 
 {
 	namespace game
 	{
-
-		typedef int ObjectID;
-
+		// World ->contains-> Object ->contains-> Component
+		// Objects DONT UPDATE.
+		
 		class Object {
-			// slots for the most important components with very frequent jobs: Physics and Rendering
-			// then vector for bonus components
-			
+		protected:
+		public:
+			std::string Name;
+			amaneshi::math::Point WorldPosition;
+			amaneshi::math::Point RelativePosition;
+			//amaneshi::math::Quaternion WorldQuaternion;
+			//amaneshi::math::Quaternion RelativeQuaternion;
+			Object * Parent;
+			std::vector<Object> Children;
+			std::vector<Component> Components;
 		};
 	}
 }

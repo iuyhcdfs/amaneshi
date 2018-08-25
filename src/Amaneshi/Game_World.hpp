@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Amaneshi/Game_Object.hpp>
+#include <vector>
 namespace amaneshi
 {
 	namespace game
@@ -21,9 +23,12 @@ namespace amaneshi
 
 		class World
 		{
-			// also... a derivative of this should be able to play nicely with saves and networking
+		public:
+			//TODO main camera
+			std::vector<Object *> Objects;
 
-			// so whats the interface anyway
+			// future: loaded/unloaded sections, section chain?
+			// the idea: worst section load time < fastest section traverse time
 		};
 	}
 }

@@ -4,6 +4,7 @@
 #include <Amaneshi/External/Graphics_Interface.hpp>
 #include <Amaneshi/External/Graphics_Primitives.hpp>
 #include <Amaneshi/External/OpenGLShaders/HelloWorld.hpp>
+#include <Amaneshi/Internal/Math_Position.hpp>
 
 // a temp engine setup just to make helloworld work
 
@@ -16,7 +17,6 @@ namespace amaneshi
 
 	void TempSetup()
 	{
-		// using namespace amaneshi;
 		
 		glfw::StartGLFW();
 		window.width = 1280;
@@ -26,11 +26,12 @@ namespace amaneshi
 		graphics::InitializeWindow(window);
 		
 		hello.GLShader = amaneshi::opengl::HelloWorld();
-		/*hello.Points.push_back(amaneshi::math::::Point(-0.8, -0.8, 0.0));
+		hello.Points.push_back(amaneshi::math::Point(-0.8, -0.8, 0.0));
 		hello.Points.push_back(amaneshi::math::Point(-0.5, 0.8, 0.0));
 		hello.Points.push_back(amaneshi::math::Point(0.6, -0.7, 0.0));
 		hello.Points.push_back(amaneshi::math::Point(1, 0, 0.0));
-		hello.Points.push_back(amaneshi::math::Point(0.5, 1, 0.0));*/
+		hello.Points.push_back(amaneshi::math::Point(0.5, 1, 0.0));
+		/*
 		hello.Points.push_back(amaneshi::math::Point(-0.5, -0.5,  0.0));
 		hello.Points.push_back(amaneshi::math::Point(-0.5,  0.5,  0.0));
 		hello.Points.push_back(amaneshi::math::Point(-0.2,  0.5,  0.0));
@@ -39,6 +40,7 @@ namespace amaneshi
 		hello.Points.push_back(amaneshi::math::Point( 0.2,  0.5,  0.0));
 		hello.Points.push_back(amaneshi::math::Point( 0.5,  0.5,  0.0));
 		hello.Points.push_back(amaneshi::math::Point( 0.5, -0.8,  0.0));
+		*/
 		hello.CompileShaders();	
 	}
 	void TempUpdate()

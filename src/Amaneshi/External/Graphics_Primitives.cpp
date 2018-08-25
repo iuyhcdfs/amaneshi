@@ -1,7 +1,7 @@
 #include "Graphics_Primitives.hpp"
 #include "Graphics_Interface.hpp"
 
-#include <Amaneshi/Math/Math_Position.hpp>
+#include <Amaneshi/Internal/Math_Position.hpp>
 
 static const int Temp_dimensionCount = 3;
 

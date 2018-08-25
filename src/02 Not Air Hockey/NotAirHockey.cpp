@@ -1,14 +1,22 @@
 
-#include <Amaneshi/Engine_Standard.hpp>
 #include <Choose_Game.h>
 
 #ifdef NOT_AIR_HOCKEY
 
 int main() {
 
-	// lots of floating colliding objects.
+	not air hockey
+		engine starter
+			sets up input configuration with callbacks for appropriate inputs
+		the callbacks will just spawn things
+			sets up game world with camera
 
-	// we might control an object that can swing at them.
+	buttons spawn objects
+		somehow connected to threading system
+
+	objects
+		are drawn repeatedly
+		are moving with physics
 
 }
 
