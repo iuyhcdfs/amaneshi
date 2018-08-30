@@ -1,7 +1,5 @@
 #pragma once
-
-// look. its more important to have something working
-// clearly adapted from https://www.gdcvault.com/play/1012321/Task-based-Multithreading-How-to
+// for me who forgot in the future i watched https://www.gdcvault.com/play/1012321/Task-based-Multithreading-How-to
 
 // what they said:
 	// tasks delegate the divisible chunks of a job 

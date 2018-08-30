@@ -23,7 +23,6 @@ void amaneshi::thread::Task::BlockIfPendingParents()
 
 void amaneshi::thread::Task::ClearOneParent()
 {
-	// David: stick with atomic int... if you have MANY parents for a task.
 	this->PendingParents--;
 	if (this->PendingParents == 0) {
 		std::unique_lock<std::mutex> lock(this->Mutex);
@@ -33,7 +32,6 @@ void amaneshi::thread::Task::ClearOneParent()
 
 int amaneshi::thread::Task::RemainingParents()
 {
-	// David: can you inline atomic access?...
 	return this->PendingParents;
 }
 

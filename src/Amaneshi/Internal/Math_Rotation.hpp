@@ -10,9 +10,8 @@ namespace amaneshi
 			float x;
 			float y;
 			float z;
-
+			// funcs
 		};
-
 
 		class EulerAngle
 		{

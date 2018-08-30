@@ -1,38 +1,48 @@
 #include "Graphics_Interface.hpp"
-#include "Setup_GLFW.hpp"
-#include <iostream>
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+#include "Graphics_Window.hpp"
+#include <Amaneshi/External_Modes.hpp>
+#include <Amaneshi/Internal/Math_Position.hpp>
+
 namespace amaneshi 
 {
-	namespace graphics 
+	namespace graphics
 	{
-		std::string Library;
-		std::string API = "opengl";
+		static const int DimensionCount = 3;
 
-		void InitializeWindow(const WindowStruct& windowParams)
+		void Polygon::CompileShaders()
 		{
-			if (Library == "glfw")
+			#ifdef GRAPHICS_OPENGL
 			{
-				amaneshi::glfw::InitializeWindow(windowParams);
+				Shader.PointCount = this->Points.size();
+				Shader.Points = new float[Shader.PointCount * DimensionCount];
+				int i = 0;
+				for (amaneshi::math::Point p : this->Points)
+				{
+					Shader.Points[i++] = p.x;
+					Shader.Points[i++] = p.y;
+					Shader.Points[i++] = p.z;
+				}
+				Shader.CompileShaders();
 			}
-			else
-			{
-				std::cout << "ERROR: Tried to initalize window without library" << std::endl;
-			}
-		}
-		void UpdateWindow()
-		{
-			if (Library == "glfw")
-			{
-				amaneshi::glfw::UpdateWindow();
-			}
+			#endif
 		}
 
-		void TestDrawTriangle()
+		void Polygon::Render()
 		{
-
+			if (amaneshi::graphics::API == "opengl")
+			{
+				this->Shader.Draw();
+			}
 		}
 
+		void Sphere::CompileShaders()
+		{
+			#ifdef GRAPHICS_OPENGL
+			{
+				Shader.Location = new float[1 * DimensionCount];
+				Shader.Radius = 
+			}
+			#endif
+		}
 	}
 }

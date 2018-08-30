@@ -1,26 +1,64 @@
 #pragma once
+#include <Amaneshi/External_Modes.hpp>
+#include <Amaneshi/Internal/Math_Position.hpp>
+#include "Messy_OpenGL.hpp"
 #include <vector>
-#include <string>
-// the engine side touching the wall called abstraction
 
-namespace amaneshi 
+namespace amaneshi
 {
-	namespace graphics 
+	namespace graphics
 	{
-		extern std::string Library;
-		extern std::string API;
-		struct WindowStruct 
+		struct Color
 		{
-			int width;
-			int height;
-			std::string title;
-			bool fullscreen;
+			double r;
+			double g;
+			double b;
+			double a;
+			Color() : r(0), g(0), b(0), a(1) {};
+			Color(double r, double g, double b) : r(r), g(g), b(b), a(1) {};
+			Color(double r, double g, double b, double a) : r(r), g(g), b(b), a(a) {};
 		};
 
-		void InitializeWindow (const WindowStruct& window);
-		void UpdateWindow();
+		class Renderable
+		{
+		public:
+			virtual void CompileShaders() = 0;
+			virtual void Render() = 0;
+		};
 
-		void TestDrawTriangle ();
+		class Polygon : public Renderable
+		{
+		public:
+			std::vector<amaneshi::math::Point> Points;
+			#ifdef GRAPHICS_OPENGL
+				amaneshi::opengl::PolygonShader Shader;
+			#endif		
+			void CompileShaders() override;
+			void Render() override;
+		};
 
+		class Sphere : public Renderable
+		{
+		public:
+			amaneshi::math::Point Center;
+			#ifdef GRAPHICS_OPENGL
+				amaneshi::opengl::SphereShader Shader;
+			#endif
+			void CompileShaders() override;
+			void Render() override;
+		};
+
+
+
+		/*
+		class Circle : public Primitive
+		{
+		public:
+			double Radius;
+			amaneshi::opengl::CircleShader GLShader;
+			void CompileShaders() override;
+			void Render() override;
+		};
+		*/
 	}
 }

@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 
-#include "Setup_GLFW.hpp"
-#include "Graphics_Interface.hpp"
+#include "Messy_GLFW.hpp"
+#include "Graphics_Window.hpp"
 #include "Input_Interface.hpp"
 
 namespace amaneshi {
@@ -27,9 +27,11 @@ namespace amaneshi {
 				return;
 			}
 			SetAmaneshiGraphics();
+			std::cout << "GLFW Initialized for Graphics_Window" << std::endl;
+			std::cout << "GLFW Initialized for Input_Interface" << std::endl;
 		}
 
-		void InitializeWindow(const amaneshi::graphics::WindowStruct& window) {
+		void InitializeWindow(const amaneshi::graphics::WindowStruct &window) {
 			if(Window) 
 			{
 				return;

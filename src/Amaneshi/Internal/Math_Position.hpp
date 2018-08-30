@@ -7,15 +7,18 @@ namespace amaneshi
 		
 		class Point
 		{
+		protected:
+			float Coordinates[3];
 		public:
-			float x;
-			float y;
-			float z;
-			Point() : x(0), y(0), z(0) {};
-			Point(float x, float y) : x(x), y(y), z(0) {};
-			Point(float x, float y, float z) : x(x), y(y), z(z) {};
+			float &x = Coordinates[0];
+			float &y = Coordinates[1];
+			float &z = Coordinates[2];
+			Point();
+			Point(float x, float y);
+			Point(float x, float y, float z);
 		};
 
-		// funcs
+		float DistanceSquared(const Point &start, const Point &finish);
+		float Distance(const Point &start, const Point &finish);
 	}
 }

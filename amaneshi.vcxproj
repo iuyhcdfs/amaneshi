@@ -21,27 +21,29 @@
   <ItemGroup>
     <ClCompile Include="src\03 Go\Go.cpp" />
     <ClCompile Include="src\04 Of Mice and Swords\MiceAndSwords.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Graphics_Primitives.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Setup_OpenGL.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Graphics_Window.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Messy_OpenGL.cpp" />
+    <ClCompile Include="src\Amaneshi\Internal\Math_Position.cpp" />
     <ClCompile Include="src\Amaneshi\Internal\Thread_Queue.cpp" />
     <ClCompile Include="src\Amaneshi\Internal\Thread_Task.cpp" />
     <ClCompile Include="src\02 Not Air Hockey\NotAirHockey.cpp" />
     <ClCompile Include="src\01 Hello World\HelloWorld.cpp" />
-    <ClCompile Include="src\Amaneshi\External\Setup_GLFW.cpp" />
+    <ClCompile Include="src\Amaneshi\External\Messy_GLFW.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Amaneshi\Component\Controller.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_3D.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
-    <ClInclude Include="src\Amaneshi\External\fpscounter.hpp" />
+    <ClInclude Include="src\Amaneshi\External_Modes.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Camera.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Graphics_Window.hpp" />
     <ClInclude Include="src\Amaneshi\External\Graphics_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\External\Graphics_Primitives.hpp" />
     <ClInclude Include="src\Amaneshi\External\Setup_Vulkan.hpp" />
     <ClInclude Include="src\Amaneshi\External\Input_Interface.hpp" />
     <ClInclude Include="src\Amaneshi\External\Network_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\External\Setup_OpenGL.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Messy_OpenGL.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.fs" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs" />
@@ -57,13 +59,12 @@
     <ClInclude Include="src\Amaneshi\Internal\Time_FPS.hpp" />
     <ClInclude Include="src\Amaneshi\Game_Object.hpp" />
     <ClInclude Include="src\Amaneshi\Component\Renderer.hpp" />
-    <ClInclude Include="src\Amaneshi\Internal\Type_Updatable.hpp" />
     <ClInclude Include="src\Amaneshi\Game_World.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Thread_Job.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Thread_Queue.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Thread_Task.hpp" />
     <ClInclude Include="src\Choose_Game.h" />
-    <ClInclude Include="src\Amaneshi\External\Setup_GLFW.hpp" />
+    <ClInclude Include="src\Amaneshi\External\Messy_GLFW.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\Amaneshi\External\OpenGLShaders\Shader Factory README.txt" />

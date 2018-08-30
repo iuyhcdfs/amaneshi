@@ -1,8 +1,8 @@
 #pragma once
 
-#include <Amaneshi/External/Messy_GLFW.hpp>
-#include <Amaneshi/External/Graphics_Window.hpp>
+#include <Amaneshi/External/Setup_GLFW.hpp>
 #include <Amaneshi/External/Graphics_Interface.hpp>
+#include <Amaneshi/External/Graphics_Classes.hpp>
 #include <Amaneshi/External/OpenGLShaders/HelloWorld.hpp>
 #include <Amaneshi/Internal/Math_Position.hpp>
 
@@ -17,6 +17,7 @@ namespace amaneshi
 
 	void TempSetup()
 	{
+		
 		glfw::StartGLFW();
 		window.width = 1280;
 		window.height = 800;
