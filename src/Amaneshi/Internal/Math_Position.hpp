@@ -4,7 +4,6 @@ namespace amaneshi
 {
 	namespace math
 	{
-		
 		class Point
 		{
 		protected:

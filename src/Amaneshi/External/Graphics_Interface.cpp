@@ -9,6 +9,33 @@ namespace amaneshi
 	{
 		static const int DimensionCount = 3;
 
+
+		void Sphere::CompileShaders()
+		{
+			#ifdef GRAPHICS_OPENGL
+			{
+				if (!Shader.IsConfigured)
+				{
+					Shader.Location = &Center->x;
+					Shader.Radius = this->Radius;
+					Shader.IsConfigured = true;
+				}
+				Shader.CompileShaders();
+			}
+			#endif
+		}
+
+		void Sphere::Render()
+		{
+			#ifdef GRAPHICS_OPENGL
+			{
+				// this is where we could 
+				this->Shader.Draw();
+			}
+			#endif
+		}
+
+
 		void Polygon::CompileShaders()
 		{
 			#ifdef GRAPHICS_OPENGL
@@ -29,20 +56,12 @@ namespace amaneshi
 
 		void Polygon::Render()
 		{
-			if (amaneshi::graphics::API == "opengl")
+			#ifdef GRAPHICS_OPENGL
 			{
 				this->Shader.Draw();
 			}
-		}
-
-		void Sphere::CompileShaders()
-		{
-			#ifdef GRAPHICS_OPENGL
-			{
-				Shader.Location = new float[1 * DimensionCount];
-				Shader.Radius = 
-			}
 			#endif
+
 		}
 	}
 }

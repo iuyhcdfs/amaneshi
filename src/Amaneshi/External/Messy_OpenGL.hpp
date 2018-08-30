@@ -12,12 +12,11 @@ namespace amaneshi
 {
 	namespace opengl
 	{
-		// the ACTUAL shader here, plug and play things in the neighbouring folder OpenGLShaders
 		class Shader
 		{
 		protected:
 		public:
-			Shader() {};
+			Shader() : IsConfigured(false) {};
 			
 			std::string VertexString;
 			std::string FragmentString;
@@ -28,11 +27,13 @@ namespace amaneshi
 			GLuint VertexShader;
 			GLuint FragmentShader;
 
+			bool IsConfigured;
+
 			virtual void CompileShaders() = 0;
 			virtual void Draw() = 0;
 		};
 
-		class PolygonShader : public Shader
+		class OldPolygonShader : public Shader
 		{
 		public:
 			GLuint PointCount;
@@ -47,7 +48,7 @@ namespace amaneshi
 		{
 		public:
 			float * Location;
-			float Radius;
+			float * Radius;
 			void CompileShaders() override;
 			void Draw() override;
 		};

@@ -24,7 +24,9 @@ namespace amaneshi
 		window.fullscreen = false;
 		graphics::InitializeWindow(window);
 		
-		hello.GLShader = amaneshi::opengl::HelloWorld();
+		// we are manually reaching into everything just to see if it works
+		// this is not how to use amaneshi
+		hello.Shader = amaneshi::opengl::HelloWorld();
 		hello.Points.push_back(amaneshi::math::Point(-0.8, -0.8, 0.0));
 		hello.Points.push_back(amaneshi::math::Point(-0.5, 0.8, 0.0));
 		hello.Points.push_back(amaneshi::math::Point(0.6, -0.7, 0.0));

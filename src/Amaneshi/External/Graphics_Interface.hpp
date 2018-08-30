@@ -31,7 +31,7 @@ namespace amaneshi
 		public:
 			std::vector<amaneshi::math::Point> Points;
 			#ifdef GRAPHICS_OPENGL
-				amaneshi::opengl::PolygonShader Shader;
+				amaneshi::opengl::OldPolygonShader Shader;
 			#endif		
 			void CompileShaders() override;
 			void Render() override;
@@ -40,7 +40,8 @@ namespace amaneshi
 		class Sphere : public Renderable
 		{
 		public:
-			amaneshi::math::Point Center;
+			amaneshi::math::Point * Center;
+			float * Radius;
 			#ifdef GRAPHICS_OPENGL
 				amaneshi::opengl::SphereShader Shader;
 			#endif

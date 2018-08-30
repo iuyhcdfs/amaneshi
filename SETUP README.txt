@@ -1,3 +1,31 @@
+
+
+This file remains as a testament to how much I didn't know.
+
+Reading it is an unfulfilling waste of time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================
+
+
+
+
+
+
 setup stuff is below the "==========="
 
 until then, ill explain the folder structure:

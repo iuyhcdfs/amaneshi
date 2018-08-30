@@ -10,9 +10,9 @@ namespace amaneshi
 		// this is not how it might work in the future
 		// but its okay to break hello world code.
 
-		PolygonShader HelloWorld()
+		OldPolygonShader HelloWorld()
 		{
-			PolygonShader newShader;
+			OldPolygonShader newShader;
 			newShader.VertexString = 
 				#include "HelloWorld.vs"
 			;
