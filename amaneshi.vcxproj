@@ -25,15 +25,17 @@
     <ClCompile Include="src\Amaneshi\External\Input_Interface.cpp" />
     <ClCompile Include="src\Amaneshi\External\Graphics_Window.cpp" />
     <ClCompile Include="src\Amaneshi\External\Messy_OpenGL.cpp" />
-    <ClCompile Include="src\Amaneshi\Internal\Math_Position.cpp" />
+    <ClCompile Include="src\Amaneshi\External\OpenGLShaders\OldPolygonShader.cpp" />
+    <ClCompile Include="src\Amaneshi\External\OpenGLShaders\SphereShader.cpp" />
+    <ClCompile Include="src\Amaneshi\Internal\Math_Vector.cpp" />
     <ClCompile Include="src\Amaneshi\Internal\Thread_Queue.cpp" />
     <ClCompile Include="src\Amaneshi\Internal\Thread_Task.cpp" />
     <ClCompile Include="src\02 Not Air Hockey\NotAirHockey.cpp" />
     <ClCompile Include="src\01 Hello World\HelloWorld.cpp" />
     <ClCompile Include="src\Amaneshi\External\Messy_GLFW.cpp" />
+    <ClCompile Include="src\Amaneshi\Object\Sphere.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Amaneshi\Component\Controller.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_3D.hpp" />
     <ClInclude Include="src\Amaneshi\Engine_Temp.hpp" />
     <ClInclude Include="src\Amaneshi\External_Modes.hpp" />
@@ -48,17 +50,18 @@
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.hpp" />
     <ClInclude Include="src\Amaneshi\External\OpenGLShaders\HelloWorld.vs" />
     <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp" />
-    <ClInclude Include="src\Amaneshi\Component\Physics.hpp" />
     <ClInclude Include="src\Amaneshi\Game_Component.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Math_Position.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Math_Rotation.hpp" />
+    <ClInclude Include="src\Amaneshi\Internal\Math_Vector.hpp" />
+    <ClInclude Include="src\Amaneshi\Internal\Thread_SingleRender.hpp" />
     <ClInclude Include="src\Amaneshi\Object\Camera.hpp" />
     <ClInclude Include="src\Amaneshi\Object\Sphere.hpp" />
+    <ClInclude Include="src\Amaneshi\World\KDTree.hpp" />
     <ClInclude Include="src\Amaneshi\World\Subspace.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Time_Clock.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Time_FPS.hpp" />
     <ClInclude Include="src\Amaneshi\Game_Object.hpp" />
-    <ClInclude Include="src\Amaneshi\Component\Renderer.hpp" />
     <ClInclude Include="src\Amaneshi\Game_World.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Thread_Job.hpp" />
     <ClInclude Include="src\Amaneshi\Internal\Thread_Queue.hpp" />

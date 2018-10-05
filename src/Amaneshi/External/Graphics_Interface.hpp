@@ -22,7 +22,7 @@ namespace amaneshi
 		class Renderable
 		{
 		public:
-			virtual void CompileShaders() = 0;
+			virtual void CompileShaders() = 0;// depreciated
 			virtual void Render() = 0;
 		};
 
@@ -33,7 +33,7 @@ namespace amaneshi
 			#ifdef GRAPHICS_OPENGL
 				amaneshi::opengl::OldPolygonShader Shader;
 			#endif		
-			void CompileShaders() override;
+			void CompileShaders() override;// depreciated
 			void Render() override;
 		};
 
@@ -45,7 +45,7 @@ namespace amaneshi
 			#ifdef GRAPHICS_OPENGL
 				amaneshi::opengl::SphereShader Shader;
 			#endif
-			void CompileShaders() override;
+			void CompileShaders() override;// depreciated
 			void Render() override;
 		};
 

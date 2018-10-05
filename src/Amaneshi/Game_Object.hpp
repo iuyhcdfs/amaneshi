@@ -2,7 +2,6 @@
 
 #include <Amaneshi/Internal/Math_Position.hpp>
 #include <Amaneshi/Internal/Math_Rotation.hpp>
-#include <Amaneshi/Internal/Type_Updatable.hpp>
 #include <Amaneshi/Game_Component.hpp>
 #include <vector>
 #include <string>

@@ -42,13 +42,22 @@
     <ClCompile Include="src\Amaneshi\External\Graphics_Interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Amaneshi\Internal\Math_Position.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Amaneshi\External\Messy_GLFW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Amaneshi\External\Messy_OpenGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\External\OpenGLShaders\SphereShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\External\OpenGLShaders\OldPolygonShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\Object\Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Amaneshi\Internal\Math_Vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,12 +107,6 @@
     <ClInclude Include="src\Amaneshi\External\Sound_Interface.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Component\Physics.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Amaneshi\Component\Renderer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\Object\Sphere.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -131,9 +134,6 @@
     <ClInclude Include="src\Amaneshi\Engine_3D.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Amaneshi\Component\Controller.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Amaneshi\External\Graphics_Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -147,6 +147,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Amaneshi\External_Modes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Internal\Thread_SingleRender.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\World\KDTree.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Amaneshi\Internal\Math_Vector.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
