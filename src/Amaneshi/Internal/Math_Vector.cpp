@@ -1,5 +1,6 @@
 #include "Math_Vector.hpp"
 #include <cmath>
+
 namespace amaneshi
 {
 	namespace math
@@ -28,11 +29,62 @@ namespace amaneshi
 			this->y = other.y;
 			this->z = other.z;
 		}
-		Vector3 & Vector3::operator=(Vector3 other)
+		Vector3 & Vector3::operator=(const Vector3 &other)
 		{
 			this->x = other.x;
 			this->y = other.y;
 			this->z = other.z;
+			return *this;
+		}
+
+		Vector3 Vector3::operator+(const Vector3 &other)
+		{
+			Vector3 result;
+			result.x = this->x + other.x;
+			result.y = this->y + other.y;
+			result.z = this->z + other.z;
+			return result;
+		}
+
+		Vector3 Vector3::operator-(const Vector3 &other)
+		{
+			Vector3 result;
+			result.x = this->x - other.x;
+			result.y = this->y - other.y;
+			result.z = this->z - other.z;
+			return result;
+		}
+
+		Vector3 & Vector3::operator+=(const Vector3 &other)
+		{
+			this->x += other.x;
+			this->y += other.y;
+			this->z += other.z;
+			return *this;
+		}
+
+		Vector3 & Vector3::operator-=(const Vector3 &other)
+		{
+			this->x -= other.x;
+			this->y -= other.y;
+			this->z -= other.z;
+			return *this;
+		}
+
+
+		Vector3 & Vector3::operator*=(const float &factor)
+		{
+			this->x *= factor;
+			this->y *= factor;
+			this->z *= factor;
+			return *this;
+		}
+
+		Vector3 & Vector3::operator/=(const float &divisor)
+		{
+			this->x /= divisor;
+			this->y /= divisor;
+			this->z /= divisor;
 			return *this;
 		}
 
@@ -61,6 +113,20 @@ namespace amaneshi
 			return sqrt( DistanceSquared(vector) );
 		}
 
+		float Dot(const Vector3 & lhs, const Vector3 & rhs)
+		{
+			return (lhs.x * rhs.x + 
+				    lhs.y * rhs.y + 
+				    lhs.z * rhs.z);
+		}
+
+		Vector3 Cross(const Vector3 & lhs, const Vector3 & rhs)
+		{
+			return Vector3(lhs.y * rhs.z - lhs.z * rhs.y,
+						   lhs.z * rhs.x - lhs.x * rhs.z,
+						   lhs.x * rhs.y - lhs.y * rhs.x);
+		}
+
 		/*
 		// Not for use: should just make your own separate vector elsewhere
 		Vector3 Normalize(const Vector3 &vector)
@@ -72,17 +138,22 @@ namespace amaneshi
 			result.z /= distance;
 		}
 		*/
-		void NormalizeVector(Vector3 * editableVector)
+		void NormalizeVector(Vector3 &editableVector)
 		{
-			float distance = Distance(*editableVector);
-			editableVector->x /= distance;
-			editableVector->y /= distance;
-			editableVector->z /= distance;
+			float distance = Distance(editableVector);
+			editableVector.x /= distance;
+			editableVector.y /= distance;
+			editableVector.z /= distance;
+			return;
 		}
-
-		void ReflectVector(Vector3 * editableVector, const Vector3 &normal)
+		void ReflectVector(Vector3 &editableVector, const Vector3 &normal)
 		{
-			
+			Vector3 unitNormal = normal;
+			NormalizeVector(unitNormal);
+			float projection = Dot(editableVector, unitNormal);
+			unitNormal *= projection * 2;
+			editableVector += unitNormal;
+			return;
 		}
 	}
 }

@@ -3,7 +3,7 @@ namespace amaneshi
 {
 	namespace opengl
 	{
-		
+		/*
 		SphereShader::SphereShader() 
 		{
 			// new compile shaders is just to do this instead.
@@ -18,5 +18,6 @@ namespace amaneshi
 			// MATH ME UP
 
 		}
+		*/
 	}
 }

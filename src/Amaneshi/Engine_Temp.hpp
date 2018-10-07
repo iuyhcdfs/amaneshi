@@ -17,6 +17,9 @@ namespace amaneshi
 
 	void TempSetup()
 	{
+
+		/*int blah = 2;
+		std::cout << (blah += 2) << std::endl;*/
 		glfw::StartGLFW();
 		window.width = 1280;
 		window.height = 800;
