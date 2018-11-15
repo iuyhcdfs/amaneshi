@@ -1,0 +1,3 @@
+/Users/davidsicongzhou/sannaigames/amaneshi/build/CMakeFiles/rebuild_cache.dir
+/Users/davidsicongzhou/sannaigames/amaneshi/build/CMakeFiles/edit_cache.dir
+/Users/davidsicongzhou/sannaigames/amaneshi/build/CMakeFiles/demo.dir
