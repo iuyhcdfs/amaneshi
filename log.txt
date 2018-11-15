@@ -1,0 +1,11 @@
+its still 2018
+--------------
+
+
+november 15
+    moved country or something. woops!
+    tried out a bunch of makefile stuff
+    also tried out xcode. dont use same name/same dir or else you'll delete everything you've done
+    the current focus is on a build system
+    to make something like this cross platform cmake might be the easiest choice.
+    
