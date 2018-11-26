@@ -1,9 +1,24 @@
 its still 2018
 --------------
 
+november 22 thursday
+    nailed the japanese test
+    cmake lists just need to be made per... type of folder
+    make some fake cross folder dependencies to see if the code is tight
 
-november 15
-    moved country or something. woops!
+november 17 sat
+    cmake. lets get rid of stupid hacky visual studio redirecting headers
+    if something SHOULD have public/private then let's do it
+    if a folder is definetly going to have all its headers be public then dont do it
+        but how do you know you won't make an extra utility header that people shouldn't use?
+        ok try to almost always make public private then    
+        >> its okay because cmakelists can list subdirectories instead of making a cmakelists file in each subdir
+    make glfw link preferably via the lib folder instead of having it installed with clang
+        prefer portability 
+
+
+november 15 thu
+    still settling after having moved country or something. woops!
     tried out a bunch of makefile stuff
     also tried out xcode. dont use same name/same dir or else you'll delete everything you've done
     the current focus is on a build system

@@ -1,10 +1,6 @@
 #include <iostream>
 #include <Amaneshi/Engine_Temp.hpp>
 
-#include <Choose_Game.h>
-
-#ifdef HELLO_WORLD
-
 #include <iostream>
 int main() 
 {
@@ -15,4 +11,3 @@ int main()
 		amaneshi::TempUpdate();
 	}
 }
-#endif
