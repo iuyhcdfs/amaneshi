@@ -8,7 +8,7 @@ int main(void) {
     return -1;
   }
   glfwMakeContextCurrent(window);
-  glClearColor(0.0f, 1.0f, 1.0f, 1.0f);
+  glClearColor(0.5f, 0.5f, 1.0f, 0.0f);
   while (!glfwWindowShouldClose(window)) {
     glClear(GL_COLOR_BUFFER_BIT);
     glfwSwapBuffers(window);

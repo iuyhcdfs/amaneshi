@@ -1,6 +1,13 @@
 its still 2018
 --------------
 
+december 13 thursday
+
+    is it a module>? give it a cmakelists
+    if you can't just copypaste a folder to another area
+    youre using the build system wrong
+
+
 november 22 thursday
     nailed the japanese test
     cmake lists just need to be made per... type of folder
