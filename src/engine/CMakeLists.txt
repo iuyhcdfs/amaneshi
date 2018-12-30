@@ -1,6 +1,16 @@
-# Building the engine
+# the actual engine
+cmake_minimum_required(VERSION 3.13.2)
 
-# the internal and external contents.... arent too split
+add_library(amaneshi "")
 
-# external + object + thread + utility + world
+# common
+add_subdirectory(Utility)
 
+# external
+add_subdirectory(Graphics)
+add_subdirectory(Input)
+
+# game related
+add_subdirectory(Object)
+#add_subdirectory(Thread)
+#add_subdirectory(World)
