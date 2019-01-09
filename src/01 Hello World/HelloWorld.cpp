@@ -4,7 +4,8 @@
 #include <iostream>
 int main() 
 {
-	// this isn't how you use the engine this is just testing components
+	// render a static sphere.
+	
 	amaneshi::TempSetup();
 	while (true) 
 	{

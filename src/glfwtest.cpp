@@ -1,6 +1,14 @@
 // main.c
 #include <GLFW/glfw3.h>
+
+// NOW WITH a trivial cmake library dependency!
+#include "printer.hpp"
+
 int main(void) {
+  printer p;
+  p.print();
+  p.test();
+  p.print();
   if (!glfwInit()) return -1;
   GLFWwindow* window = glfwCreateWindow(320, 240, "Hello World", NULL, NULL);
   if (!window) {
