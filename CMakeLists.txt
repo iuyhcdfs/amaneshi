@@ -22,19 +22,17 @@ if(WIN32)
 endif(WIN32)
 
 #--------------------------------------------------------
-# Builds
-
 # Hello CMake
 add_subdirectory(src/00\ Hello\ CMake)
-
-# glew/glfw hello world hard link
+# test with glew/glfw hello world hard link
 add_executable(glfw_hello src/glfwtest.cpp)
 target_link_libraries(glfw_hello glew glfw)
 # now prints 2 random continguous numbers on my mac
 target_link_libraries(glfw_hello hello_cmake) 
 
+#--------------------------------------------------------
 # the engine
-add_subdirectory(src/engine)
+add_subdirectory(src/Engine)
 target_link_libraries(amaneshi glew glfw)
 
 #--------------------------------------------------------
