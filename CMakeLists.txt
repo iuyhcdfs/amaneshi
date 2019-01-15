@@ -11,9 +11,9 @@ cmake_minimum_required(VERSION 3.13.2)
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-add_subdirectory(./External/glfw3.2.1)
+add_subdirectory(External/glfw3.2.1)
 # glew just needs this folder
-add_subdirectory(./External/glew2.1.0/build/cmake)
+add_subdirectory(External/glew2.1.0/build/cmake)
 
 #--------------------------------------------------------
 if(APPLE)
@@ -25,7 +25,7 @@ endif(WIN32)
 # Hello CMake
 add_subdirectory(Games/00\ Hello\ CMake)
 # test with glew/glfw hello world hard link
-add_executable(glfw_hello src/glfwtest.cpp)
+add_executable(glfw_hello Games/glfwtest.cpp)
 target_link_libraries(glfw_hello glew glfw)
 # now prints 2 random continguous numbers on my mac
 target_link_libraries(glfw_hello hello_cmake) 
