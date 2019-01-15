@@ -6,6 +6,18 @@
 CMAKE_VERSION="3.13.2"
 DIRNAME=`basename "$PWD"`
 MODULENAME=`echo "$DIRNAME" | tr '[A-Z]' '[a-z]'`
+IFS=$'\n'
+
+if [ "$MODULENAME" == "amaneshi" ]; then
+    printf "Refusing to overwrite root directory CMakeLists.txt.\n"
+    exit 0
+fi
+
+if [ "$MODULENAME" == "engine" ]; then
+    printf "Handling any folder NOT called engine, where the subdirectory include order matters\n"
+    exit 0
+fi
+
 # automatically say yes to making intermediary file
 FORCE='false'
 if [ "$1" == "-f" ]; then
@@ -19,6 +31,9 @@ if [ "$FORCE" == "false" ]; then
     printf "CMake Version set to generate: $CMAKE_VERSION\n"
     printf "==========================================================\n"
     read INPUT
+else
+    printf "==========================================================\n"
+    printf "generating/overwriting cmakelists.txt in forced mode"
 fi
 
 if [ "$FORCE" == "true" ] || [[ $INPUT =~ ^(y|Y) ]]; then
@@ -33,11 +48,12 @@ if [ "$FORCE" == "true" ] || [[ $INPUT =~ ^(y|Y) ]]; then
     if [ -d "Public" ] && [ -d "Private" ]; then
 
         printf "Bottom level module (Public and Private folder) in current directory\n"
-        CPPLIST=`ls -1 Private/*.cpp | sed 's/^\(.*\)$/    \1/'`
+        CPPLIST=`ls -1 Private/*.cpp`
         if [ "$CPPLIST" != "" ]; then
             printf "Fetching .cpp files from ./Private\n\n"
-            printf "    Found the following sources\n"
-            printf "    =========================\n$CPPLIST\n\n"
+            printf "Found the following sources\n"
+            printf "=========================\n$CPPLIST\n\n"
+            CPPLIST=`echo "$CPPLIST" | sed 's/^\(.*\)$/    \1/'`
         else 
             printf "No .cpp files found in ./Private\n"
         fi
@@ -53,18 +69,18 @@ if [ "$FORCE" == "true" ] || [[ $INPUT =~ ^(y|Y) ]]; then
 
     else # take care of folders that contain a group of common modules
 
-        printf "No Public/Private folder in current directory\n\n"
+        printf "No Public/Private folder: updating/adding all subdirectories\n\n"
         echo "cmake_minimum_required(VERSION $CMAKE_VERSION)\n" > CMakeLists.txt
-        echo "add_library(amaneshi_$MODULENAME)\n" >> CMakeLists.txt
-        FOLDERLIST=`ls -1 -d */ | sed 's/\///' | sed 's/^\(.*\)$/    \1/'`
-        MODULELIST=`echo "$FOLDERLIST" | tr "[A-Z]" "[a-z]"`
+        FOLDERLIST=`ls -1 -d */ | sed 's/\///'`
+        #MODULELIST=`echo "$FOLDERLIST" | tr "[A-Z]" "[a-z]" | sed 's/^\(.*\)$/    \1/'`
         if [ "$FOLDERLIST" != "" ]; then
-            printf "    Found the following folders\n"
-            printf "    ===========================\n$FOLDERLIST\n\n"
-            echo "add_subdirectory(\n$FOLDERLIST\n)\n" >> CMakeLists.txt
-            echo "target_include_directories(amaneshi_$MODULENAME\n$MODULELIST\n)" >> CMakeLists.txt
+            printf "Found the following folders\n"
+            printf "===========================\n$FOLDERLIST\n\n"
+            for EACHLINE in $FOLDERLIST; do
+                echo "add_subdirectory($EACHLINE)" >> CMakeLists.txt
+            done
         else
-            printf "No folders at all! Accidentally ran amns-cmake-generator?"
+            printf "No folders at all! You accidentally ran amns-cmake-generator?\n"
         fi
     fi
     printf "All Finished!\n"
