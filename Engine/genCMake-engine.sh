@@ -23,4 +23,4 @@ for EACH_LINE in $ALL_MODULES; do
     echo "target_link_libraries(amaneshi_engine $EACH_LINE)" >> CMakeLists.txt
 done
 
-# genCMake-all-subfolders.sh
+genCMake-all-subfolders.sh
