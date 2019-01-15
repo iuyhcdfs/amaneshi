@@ -32,8 +32,7 @@ target_link_libraries(glfw_hello hello_cmake)
 
 #--------------------------------------------------------
 # the engine
-add_subdirectory(Engine)
-#target_link_libraries(amaneshi_engine glew glfw)
+add_subdirectory(Engine) # library: "amaneshi_engine"
 
 #--------------------------------------------------------
 # Games
