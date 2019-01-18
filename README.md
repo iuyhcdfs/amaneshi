@@ -1,16 +1,11 @@
-a c++ sandbox for learning:
+a c++ sandbox.
 
-(basically whatever subjects [i missed/didn't exist] during university)
+rather than focusing on trying elaborate things
 
- - multithreading things
- - what makes a good build system?
- - how to structure modules and dependencies?
- - how to use opengl?
- - playing with multithreading
- - how to make a codebase connect to other libraries easily?
- - how to make cross platform code?
- - executing some (weird hardware based)game ideas if unreal/unity can't
+i just wanted to make code thats nice to read and works
 
- - get the general idea for a game engine.... then use a more fleshed out game engine
+also to teach myself anything university didn't.
 
- 私のコード能力が増えて、私の世界を変更させて
+
+this engine is free to use because if you aren't using a proper one with an actual team, you'll fail
+
