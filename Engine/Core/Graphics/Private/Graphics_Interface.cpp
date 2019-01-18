@@ -1,7 +1,6 @@
 #include "Graphics_Interface.hpp"
 #include "Graphics_Window.hpp"
-#include <Amaneshi/External_Modes.hpp>
-#include <Amaneshi/Internal/Math_Position.hpp>
+#include <Math_Position.hpp>
 
 namespace amaneshi 
 {
@@ -12,56 +11,39 @@ namespace amaneshi
 
 		void Sphere::CompileShaders()
 		{
-			#ifdef GRAPHICS_OPENGL
+			if (!Shader.IsConfigured)
 			{
-				if (!Shader.IsConfigured)
-				{
-					Shader.Location = &Center->x;
-					Shader.Radius = this->Radius;
-					Shader.IsConfigured = true;
-				}
-				Shader.CompileShaders();
+				Shader.Location = &Center->x;
+				Shader.Radius = this->Radius;
+				Shader.IsConfigured = true;
 			}
-			#endif
+			Shader.CompileShaders();
 		}
 
 		void Sphere::Render()
 		{
-			#ifdef GRAPHICS_OPENGL
-			{
-				// this is where we could 
-				this->Shader.Draw();
-			}
-			#endif
+			// this is where we could 
+			this->Shader.Draw();
 		}
 
 
 		void Polygon::CompileShaders()
 		{
-			#ifdef GRAPHICS_OPENGL
+			Shader.PointCount = this->Points.size();
+			Shader.Points = new float[Shader.PointCount * DimensionCount];
+			int i = 0;
+			for (amaneshi::math::Point p : this->Points)
 			{
-				Shader.PointCount = this->Points.size();
-				Shader.Points = new float[Shader.PointCount * DimensionCount];
-				int i = 0;
-				for (amaneshi::math::Point p : this->Points)
-				{
-					Shader.Points[i++] = p.x;
-					Shader.Points[i++] = p.y;
-					Shader.Points[i++] = p.z;
-				}
-				Shader.CompileShaders();
+				Shader.Points[i++] = p.x;
+				Shader.Points[i++] = p.y;
+				Shader.Points[i++] = p.z;
 			}
-			#endif
+			Shader.CompileShaders();
 		}
 
 		void Polygon::Render()
 		{
-			#ifdef GRAPHICS_OPENGL
-			{
-				this->Shader.Draw();
-			}
-			#endif
-
+			this->Shader.Draw();
 		}
 	}
 }

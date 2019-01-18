@@ -1,4 +1,8 @@
 
+January 15ish 
+    cmake stuff fixed
+    public folders hopefully work well
+
 January 9/10 wednesday thursday
     study more aggressively and try small projects to make things manageable
     you instead learnt cmake in the space of 20 minutes

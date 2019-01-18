@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Amaneshi/External_Modes.hpp>
+#include <External_Modes.hpp>
 #ifdef GRAPHICS_OPENGL
 
 #include <vector>

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Engine.hpp"
+
 #include <Amaneshi/External/Messy_GLFW.hpp>
 #include <Amaneshi/External/Graphics_Window.hpp>
 #include <Amaneshi/External/Graphics_Interface.hpp>

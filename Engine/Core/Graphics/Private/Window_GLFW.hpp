@@ -1,6 +1,7 @@
 #pragma once
 
-#include <Amaneshi/External_Modes.hpp>
+#include <External_Modes.hpp>
+
 #ifdef WINDOW_GLFW
 
 #include <GL/glew.h>

@@ -1,6 +1,5 @@
 #pragma once
-#include <Amaneshi/External_Modes.hpp>
-#include <Amaneshi/Internal/Math_Position.hpp>
+#include <Math_Position.hpp>
 #include "Messy_OpenGL.hpp"
 #include <vector>
 
@@ -30,9 +29,7 @@ namespace amaneshi
 		{
 		public:
 			std::vector<amaneshi::math::Point> Points;
-			#ifdef GRAPHICS_OPENGL
-				amaneshi::opengl::OldPolygonShader Shader;
-			#endif		
+			amaneshi::opengl::OldPolygonShader Shader;
 			void CompileShaders() override;// depreciated
 			void Render() override;
 		};
@@ -42,9 +39,7 @@ namespace amaneshi
 		public:
 			amaneshi::math::Point * Center;
 			float * Radius;
-			#ifdef GRAPHICS_OPENGL
-				amaneshi::opengl::SphereShader Shader;
-			#endif
+			amaneshi::opengl::SphereShader Shader;
 			void CompileShaders() override;// depreciated
 			void Render() override;
 		};

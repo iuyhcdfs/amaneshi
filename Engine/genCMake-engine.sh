@@ -1,6 +1,3 @@
-echo "cmake_minimum_required(VERSION 3.13.2)\n" > CMakeLists.txt
-echo "add_library(amaneshi_engine Engine_Presets.cpp Engine_Presets.hpp)\n" >> CMakeLists.txt
-
 #echo "#--------------------------------------------------------
 ## this is what glfw told you to paste in.
 #set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
@@ -10,17 +7,9 @@ echo "add_library(amaneshi_engine Engine_Presets.cpp Engine_Presets.hpp)\n" >> C
 ## glew just needs this folder
 #add_subdirectory(External/glew2.1.0/build/cmake)\n" >> CMakeLists.txt
 
-echo "add_subdirectory(Utility)" >> CMakeLists.txt
-echo "add_subdirectory(Core)" >> CMakeLists.txt
-echo "add_subdirectory(Game)" >> CMakeLists.txt
-echo "" >> CMakeLists.txt
-
 CMAKE_VERSION="3.13.2"
 IFS=$'\n'
 
-ALL_MODULES=`find . -mindepth 2 -maxdepth 2 -type d -exec basename {} \; | tr '[A-Z]' '[a-z]'`
-for EACH_LINE in $ALL_MODULES; do
-    echo "target_link_libraries(amaneshi_engine $EACH_LINE)" >> CMakeLists.txt
-done
+# just edit Engine/CMakeLists.txt manually. its not worth automating.
 
 genCMake-all-subfolders.sh

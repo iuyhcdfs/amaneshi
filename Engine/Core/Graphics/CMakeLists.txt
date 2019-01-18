@@ -4,8 +4,8 @@ add_library(graphics
     Private/Graphics_Interface.cpp
     Private/Graphics_Shader.cpp
     Private/Graphics_Window.cpp
-    Private/Messy_GLFW.cpp
     Private/Messy_OpenGL.cpp
+    Private/Window_GLFW.cpp
 )
 
 target_include_directories(graphics PRIVATE Private)

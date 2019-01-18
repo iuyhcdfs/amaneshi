@@ -1,7 +1,6 @@
 
 #include <vector>
 #include <iostream>
-#include <Amaneshi/External_Modes.hpp>
 #include "Input_Interface.hpp"
 #include "Messy_GLFW.hpp"
 
@@ -17,9 +16,7 @@ namespace amaneshi
 
 		void PollInput()
 		{
-			#ifdef INPUT_GLFW
 			glfwPollEvents();
-			#endif
 		}
 		void UpdateKeyState(KeyEnum key, bool state)
 		{
