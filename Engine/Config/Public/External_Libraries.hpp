@@ -1,5 +1,8 @@
 #pragma once
 
+// Following #defines decide implementation for amaneshi::external
+// and implementations of related modules
+
 //#define GRAPHICS_?
 #define GRAPHICS_OPENGL
 //#define GRAPHICS_VULKAN
@@ -13,14 +16,3 @@
 //#define AUDIO_?
 
 //#define NETWORK_?
-
-namespace amaneshi
-{
-    namespace external
-    {
-        void InitializeWindow();
-        void InitializeInput();
-        //void InitializeAudio();
-        //void InitializeNetwork();
-    }
-}

@@ -54,7 +54,7 @@ if [ "$FORCE" == "true" ] || [[ $INPUT =~ ^(y|Y) ]]; then
             printf "Fetching .cpp files from ./Private\n\n"
             printf "Found the following sources\n"
             printf "=========================\n$CPP_LIST\n\n"
-            CPP_LIST=`echo "$CPP_LIST" | sed 's/^\(.*\)$/    \1/'`
+            CPP_LIST=`echo "$CPP_LIST" | sed 's/ /\\\\ /g' | sed 's/^\(.*\)$/    \1/'`
         else 
             printf "No .cpp files found in ./Private\n"
         fi
@@ -72,7 +72,7 @@ if [ "$FORCE" == "true" ] || [[ $INPUT =~ ^(y|Y) ]]; then
 
         printf "No Public/Private folder: updating/adding all subdirectories\n\n"
         echo "cmake_minimum_required(VERSION $CMAKE_VERSION) \n" > CMakeLists.txt
-        FOLDER_LIST=`ls -1 -d */ | sed 's/\///'`
+        FOLDER_LIST=`ls -1 -d */ | sed 's/\///' | sed 's/ /\\\\ /g'`
         #MODULELIST=`echo "$FOLDER_LIST" | tr "[A-Z]" "[a-z]" | sed 's/^\(.*\)$/    \1/'`
         if [ "$FOLDER_LIST" != "" ]; then
             printf "Found the following folders\n"

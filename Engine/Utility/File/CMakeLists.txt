@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.13.2)
 
 add_library(file
-    Private/File_Reader.cpp
-    Private/Shader_Reader.cpp
+    Private/File.cpp
+    Private/File_Shader.cpp
 )
 
 target_include_directories(file PRIVATE Private)

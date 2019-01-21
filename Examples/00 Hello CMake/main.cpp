@@ -1,5 +1,6 @@
-#include "printer.hpp"
 
+
+#include "printer.hpp"
 int main() {
 	printer p;
 	p.test();

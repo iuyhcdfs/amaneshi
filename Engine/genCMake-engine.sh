@@ -10,6 +10,5 @@
 CMAKE_VERSION="3.13.2"
 IFS=$'\n'
 
-# just edit Engine/CMakeLists.txt manually. its not worth automating.
-
+# uhh actually just edit Engine/CMakeLists.txt manually. its not worth automating.
 genCMake-all-subfolders.sh

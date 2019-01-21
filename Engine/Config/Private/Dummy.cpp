@@ -1,0 +1,1 @@
+// dummy cpp lets cmake accept External_Libraries.hpp header as a module to pass around

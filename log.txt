@@ -1,3 +1,32 @@
+...dont solve problems that dont need to be solved
+
+
+
+January 21
+    well you can make different modules play nicely in cmake
+    and a script to generate it easily
+    this feels like most things missing from an IDE are taken care of
+    so then you have to ask, was it worth it?
+
+    well if it generates ide projects as well maybe so!
+
+    if a user updates the project in the ide without doing anything with cmake,
+    the script i made can fix up the cmake build anyway.
+
+    now its just about the files. thats nice!
+
+    IS IT REALLY WORTH SPENDING TIME ON SOLVING THIS KIND OF PROBLEM
+    if you want to justify it 
+
+    think about how much technical debt is incurred if you DIDNT do this
+
+    if your code becomes REUSABLE then its worth it.
+    but an engine that works,, kind of is reusable already
+    if its easy to understand it just allows other people to figure it out
+    and thats a good thing if you have collaborators
+
+    so i guess you're just pretending that you might have collaborators sometime. 
+    well it was fun get to work on the game tho
 
 January 15ish 
     cmake stuff fixed

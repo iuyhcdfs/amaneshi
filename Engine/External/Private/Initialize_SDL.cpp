@@ -1,1 +1,0 @@
-// implement external, do anything else in namespace sdl
