@@ -14,9 +14,9 @@ add_subdirectory(External)
         set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
         set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
         set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-        add_subdirectory(../Libraries/glfw3.2.1)
+        add_subdirectory(./External/Libraries/glfw3.2.1)
         # glew just needs this folder
-        add_subdirectory(../Libraries/glew2.1.0/build/cmake)
+        add_subdirectory(./External/Libraries/glew2.1.0/build/cmake)
         target_link_libraries(linkglfw glew glfw)
     #target_link_libraries(amaneshi_engine linksdl)
 
@@ -31,8 +31,8 @@ add_subdirectory(Core)
     #target_link_libraries(amaneshi_engine input)
         target_link_libraries(input config)
     #target_link_libraries(amaneshi_engine graphics)
-        target_link_libraries(graphics config)
-        target_link_libraries(graphics math)
+        #target_link_libraries(graphics config)
+        #target_link_libraries(graphics math)
     #target_link_libraries(amaneshi_engine thread)
 
 #--------------------------------------------------------

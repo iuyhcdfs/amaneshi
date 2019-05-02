@@ -11,12 +11,13 @@ if(WIN32)
 endif(WIN32)
 #--------------------------------------------------------
 # the engine
-    #add_subdirectory(Engine) #libraryname="amaneshi_engine"
+    add_subdirectory(Engine) #libraryname="amaneshi_engine"
+    
 
 #--------------------------------------------------------
 # Games
-    #add_subdirectory(Examples)
-    #target_link_libraries(01\ Hello\ World amaneshi_engine)
+    add_subdirectory(Examples)
+    target_link_libraries(01\ Hello\ World amaneshi_engine)
     #target_link_libraries(02\ Stress\ Test amaneshi_engine)
 
 #--------------------------------------------------------
