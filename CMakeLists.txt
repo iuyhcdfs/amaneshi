@@ -10,19 +10,20 @@ endif(APPLE)
 if(WIN32)
 endif(WIN32)
 #--------------------------------------------------------
-# the engine
+# STEP ONE add the engine
     add_subdirectory(Engine) #libraryname="amaneshi_engine"
     
 
 #--------------------------------------------------------
-# Games
+# STEP TWO then add your games
     add_subdirectory(Examples)
     target_link_libraries(01\ Hello\ World amaneshi_engine)
     #target_link_libraries(02\ Stress\ Test amaneshi_engine)
 
+
+
 #--------------------------------------------------------
-# a bodgy hello world that you should never use as an example 
-# but i figured out how cmake works with it
+# a bodgy hello world for reference thats now too old to work
 
 # this is what glfw told you to paste in.
 #set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
