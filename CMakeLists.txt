@@ -16,7 +16,7 @@ endif(WIN32)
 
 #--------------------------------------------------------
 # STEP TWO then add your games
-    add_subdirectory(Examples)
+add_subdirectory(Examples)
     target_link_libraries(01\ Hello\ World amaneshi_engine)
     #target_link_libraries(02\ Stress\ Test amaneshi_engine)
 
