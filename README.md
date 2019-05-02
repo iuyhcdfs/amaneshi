@@ -1,14 +1,12 @@
-a c++ sandbox.
+this repository held a pretty bad ideal of making a sandbox to try things in
 
-Goals:
+its more important to build things with purpose
 
-Code is nice to read
-Code works (in progress)
-Code is actually reusable (because of the above)
-Code doesn't have to be the fastest
-Code is fun to make and think about
-I learn stuff and implement it here because otherwise it wouldn't be my sandbox
+a game engine for example shouldn't really be called an engine
+its just a game after all. but some elements are in common.
 
-Irregular updates - Take your time. Life is only short because y'all keep comparing it to eternity.
+all game engines are just games that happen to be a subset of many other games, thus providing a nice starting point
 
-wtfpl license because in terms of game engines there are better choices ahaha
+but if you wanted to make a sandbox of code, you can't make a subset of literally everything without building hardly anything at all. you're stuck thinking about too many things.
+
+
